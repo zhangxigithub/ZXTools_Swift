@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 
   s.description  = <<-DESC
 
-                   ZXTools-Swift
+                   ZXTools-Swift.
 
                    DESC
 
