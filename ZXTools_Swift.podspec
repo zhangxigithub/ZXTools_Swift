@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "ZXTools_Swift"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "ZXTools_Swift"
 
 
@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/zhangxigithub/ZXTools_Swift.git", :tag => "0.1.0" }
+  s.source       = { :git => "https://github.com/zhangxigithub/ZXTools_Swift.git", :tag => "0.1.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
