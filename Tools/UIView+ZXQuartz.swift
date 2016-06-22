@@ -141,7 +141,7 @@ extension UIView
         y7 = CGPointMake(frame.origin.x, frame.origin.y+frame.size.height-r);
         y8 = CGPointMake(frame.origin.x, frame.origin.y+r);
         
-        var pathRef = CGPathCreateMutable()
+        let pathRef = CGPathCreateMutable()
         
         if (r <= 0) {
             
