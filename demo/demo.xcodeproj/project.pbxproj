@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33460B8E1D1ACD1300B24F0B /* Bonjour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33460B8D1D1ACD1300B24F0B /* Bonjour.swift */; };
+		33460B901D1ACE1700B24F0B /* ZXTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33460B8F1D1ACE1700B24F0B /* ZXTimer.swift */; };
 		339080701C0BF810008C36F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3390806F1C0BF810008C36F3 /* AppDelegate.swift */; };
 		339080751C0BF810008C36F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339080731C0BF810008C36F3 /* Main.storyboard */; };
 		339080771C0BF810008C36F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339080761C0BF810008C36F3 /* Assets.xcassets */; };
@@ -30,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33460B8D1D1ACD1300B24F0B /* Bonjour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bonjour.swift; sourceTree = "<group>"; };
+		33460B8F1D1ACE1700B24F0B /* ZXTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXTimer.swift; sourceTree = "<group>"; };
+		33460B911D1AD25B00B24F0B /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		3390806C1C0BF810008C36F3 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3390806F1C0BF810008C36F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		339080741C0BF810008C36F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 			children = (
 				33E9813E1D1A18140045A110 /* Tools */,
 				3390806F1C0BF810008C36F3 /* AppDelegate.swift */,
+				33460B911D1AD25B00B24F0B /* MyPlayground.playground */,
 				339080841C0BF87B008C36F3 /* Menu.swift */,
 				339080731C0BF810008C36F3 /* Main.storyboard */,
 				339080761C0BF810008C36F3 /* Assets.xcassets */,
@@ -98,6 +104,8 @@
 		33E9813E1D1A18140045A110 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				33460B8F1D1ACE1700B24F0B /* ZXTimer.swift */,
+				33460B8D1D1ACD1300B24F0B /* Bonjour.swift */,
 				33E9813F1D1A18140045A110 /* NSDate+Today.swift */,
 				33E981401D1A18140045A110 /* NSDictionary+JSON.swift */,
 				33E981411D1A18140045A110 /* NSUserDefaults+Convenice.swift */,
@@ -195,11 +203,13 @@
 				33E981571D1A18140045A110 /* UIView+Render.swift in Sources */,
 				339080701C0BF810008C36F3 /* AppDelegate.swift in Sources */,
 				33E9815C1D1A18140045A110 /* ZXQuartzView.swift in Sources */,
+				33460B901D1ACE1700B24F0B /* ZXTimer.swift in Sources */,
 				33E981521D1A18140045A110 /* UIColor+ZXTools.swift in Sources */,
 				33E981511D1A18140045A110 /* String+ZXTools.swift in Sources */,
 				33E9814F1D1A18140045A110 /* NSDictionary+JSON.swift in Sources */,
 				33E981591D1A18140045A110 /* UIWebView+JS.swift in Sources */,
 				33E981531D1A18140045A110 /* UIImageView+Animation.swift in Sources */,
+				33460B8E1D1ACD1300B24F0B /* Bonjour.swift in Sources */,
 				33E9814E1D1A18140045A110 /* NSDate+Today.swift in Sources */,
 				33E981501D1A18140045A110 /* NSUserDefaults+Convenice.swift in Sources */,
 				33E981541D1A18140045A110 /* UILabel+ZXTools.swift in Sources */,
