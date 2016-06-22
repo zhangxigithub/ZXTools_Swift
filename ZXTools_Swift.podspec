@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "ZXTools_Swift"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "ZXTools_Swift"
 
 
@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
 
-
+  s.module_name = 'ZXTools'
   s.source       = { :git => "https://github.com/zhangxigithub/ZXTools_Swift.git", :tag => s.version }
 
 
@@ -55,7 +55,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Tools/*.{swift}"
+  s.source_files  = "Tools/**/*.{swift}"
 
 
   #s.exclude_files = "Classes/Exclude"

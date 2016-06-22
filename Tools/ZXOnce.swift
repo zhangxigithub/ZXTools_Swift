@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZXOnce {
+public class ZXOnce {
 
     class func run(key:String,once:(()->Void)?,another:(()->Void)?)
     {

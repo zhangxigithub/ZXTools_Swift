@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIView
+public extension UIView
 {
     //矩形、圆角矩形 rect
     func zx_drawRect(rect:CGRect,radius:Float=0,fillMode:CGPathDrawingMode=CGPathDrawingMode.FillStroke)

@@ -8,14 +8,9 @@
 
 import UIKit
 
-class RenderView: UIView {
-    
-    
-    
-}
 
 
-extension UIView
+public extension UIView
 {
     enum RenderType {
         case UIView

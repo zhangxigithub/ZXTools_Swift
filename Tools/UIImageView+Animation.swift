@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIImageView
+public extension UIImageView
 {
     
     func animation(imageNames:Array<String>,time:NSTimeInterval=0.1,`repeat`:Int=0)

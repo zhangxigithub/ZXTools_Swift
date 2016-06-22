@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView
+public extension UIView
 {
     func constraint(identifier:String) -> NSLayoutConstraint?
     {

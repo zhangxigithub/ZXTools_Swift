@@ -25,21 +25,3 @@ public extension NSDictionary
     
 }
 
-//extension Dictionary
-//{
-//    
-//    func JSONString()->String?
-//    {
-//        let dic = self  // as NSMutableDictionary
-//        
-//        return ""
-////        let data = NSJSONSerialization.dataWithJSONObject((self as NSDictionary), options: NSJSONWritingOptions.PrettyPrinted, error: nil)
-////        if data == nil
-////        {
-////            return nil
-////        }
-////        let strJson = NSString(data: data!, encoding: NSUTF8StringEncoding)
-////        return strJson
-//    }
-//    
-//}

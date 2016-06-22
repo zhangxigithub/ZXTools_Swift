@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIWebView
+public extension UIWebView
 {
     
     func injectJS(name: String?, ofType ext: String?) -> String?
