@@ -9,7 +9,7 @@
 import Foundation
 
 
-extension NSDictionary
+public extension NSDictionary
 {
 
     func JSONString()->String?

@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "ZXTools_Swift"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "ZXTools_Swift"
 
 
@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/zhangxigithub/ZXTools_Swift"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
   s.license      = "Apache License 2.0"
@@ -45,13 +44,7 @@ Pod::Spec.new do |s|
   # s.tvos.deployment_target = "9.0"
 
 
-  # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the location from where the source should be retrieved.
-  #  Supports git, hg, bzr, svn and HTTP.
-  #
-
-  s.source       = { :git => "https://github.com/zhangxigithub/ZXTools_Swift.git", :tag => "0.1.1" }
+  s.source       = { :git => "https://github.com/zhangxigithub/ZXTools_Swift.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -62,8 +55,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Tools/**/*.{swift}"
-  
+  s.source_files  = "Tools/*.{swift}"
+
+
   #s.exclude_files = "Classes/Exclude"
   # s.public_header_files = "Classes/**/*.h"
 
@@ -95,13 +89,6 @@ Pod::Spec.new do |s|
   # s.libraries = "iconv", "xml2"
 
 
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
-
-  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"

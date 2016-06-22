@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSDate
+public extension NSDate
 {
     
     func today() -> Bool

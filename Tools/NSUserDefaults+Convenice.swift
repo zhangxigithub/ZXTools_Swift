@@ -9,7 +9,7 @@
 import Foundation
 
 
-extension NSUserDefaults
+public extension NSUserDefaults
 {
     subscript(key : String) -> AnyObject?
         {
