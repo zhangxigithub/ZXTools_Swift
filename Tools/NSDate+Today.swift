@@ -13,9 +13,6 @@ extension NSDate
     
     func today() -> Bool
     {
-        //let f = NSDateFormatter()
-        //f.dateFromString("yyyy-MM-dd")
-        //let s = f.st
         
         let second = Int(NSDate().timeIntervalSince1970) - (Int(NSDate().timeIntervalSince1970) % Int(60*60*24))
         

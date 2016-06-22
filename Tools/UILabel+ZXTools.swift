@@ -8,10 +8,10 @@
 
 import UIKit
 
-extension UILabel
+public extension UILabel
 {
     
-    func setMultipleColor(texts:(color:UIColor,text:String)...)
+    func setMultipleColorText(texts:Array<(color:UIColor,text:String)>)
     {
         
         var string = ""

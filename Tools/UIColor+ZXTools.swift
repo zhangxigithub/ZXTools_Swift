@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIColor
+public extension UIColor
 {
 
     convenience init(rgb r:Int,g:Int,b:Int) {

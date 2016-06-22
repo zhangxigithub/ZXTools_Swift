@@ -11,18 +11,22 @@
 		339080751C0BF810008C36F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339080731C0BF810008C36F3 /* Main.storyboard */; };
 		339080771C0BF810008C36F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339080761C0BF810008C36F3 /* Assets.xcassets */; };
 		3390807A1C0BF810008C36F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339080781C0BF810008C36F3 /* LaunchScreen.storyboard */; };
-		339080831C0BF82A008C36F3 /* UIColor+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339080821C0BF82A008C36F3 /* UIColor+ZXTools.swift */; };
 		339080851C0BF87B008C36F3 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339080841C0BF87B008C36F3 /* Menu.swift */; };
-		3390808F1C0C1B2E008C36F3 /* NSDate+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339080861C0C1B2E008C36F3 /* NSDate+Today.swift */; };
-		339080901C0C1B2E008C36F3 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339080871C0C1B2E008C36F3 /* NSDictionary+JSON.swift */; };
-		339080911C0C1B2E008C36F3 /* NSUserDefaults+Convenice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339080881C0C1B2E008C36F3 /* NSUserDefaults+Convenice.swift */; };
-		339080921C0C1B2E008C36F3 /* String+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339080891C0C1B2E008C36F3 /* String+ZXTools.swift */; };
-		339080931C0C1B2E008C36F3 /* UIImageView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3390808A1C0C1B2E008C36F3 /* UIImageView+Animation.swift */; };
-		339080941C0C1B2E008C36F3 /* UILabel+MultipleColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3390808B1C0C1B2E008C36F3 /* UILabel+MultipleColor.swift */; };
-		339080951C0C1B2E008C36F3 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3390808C1C0C1B2E008C36F3 /* UIView+Constraint.swift */; };
-		339080961C0C1B2E008C36F3 /* UIView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3390808D1C0C1B2E008C36F3 /* UIView+Circle.swift */; };
-		339080971C0C1B2E008C36F3 /* UIWebView+JS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3390808E1C0C1B2E008C36F3 /* UIWebView+JS.swift */; };
-		339080991C0C1E7B008C36F3 /* NSObject+Fire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339080981C0C1E7B008C36F3 /* NSObject+Fire.swift */; };
+		33E9814E1D1A18140045A110 /* NSDate+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9813F1D1A18140045A110 /* NSDate+Today.swift */; };
+		33E9814F1D1A18140045A110 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981401D1A18140045A110 /* NSDictionary+JSON.swift */; };
+		33E981501D1A18140045A110 /* NSUserDefaults+Convenice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981411D1A18140045A110 /* NSUserDefaults+Convenice.swift */; };
+		33E981511D1A18140045A110 /* String+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981421D1A18140045A110 /* String+ZXTools.swift */; };
+		33E981521D1A18140045A110 /* UIColor+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981431D1A18140045A110 /* UIColor+ZXTools.swift */; };
+		33E981531D1A18140045A110 /* UIImageView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981441D1A18140045A110 /* UIImageView+Animation.swift */; };
+		33E981541D1A18140045A110 /* UILabel+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981451D1A18140045A110 /* UILabel+ZXTools.swift */; };
+		33E981551D1A18140045A110 /* UIView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981461D1A18140045A110 /* UIView+Circle.swift */; };
+		33E981561D1A18140045A110 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981471D1A18140045A110 /* UIView+Constraint.swift */; };
+		33E981571D1A18140045A110 /* UIView+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981481D1A18140045A110 /* UIView+Render.swift */; };
+		33E981581D1A18140045A110 /* UIView+ZXQuartz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981491D1A18140045A110 /* UIView+ZXQuartz.swift */; };
+		33E981591D1A18140045A110 /* UIWebView+JS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814A1D1A18140045A110 /* UIWebView+JS.swift */; };
+		33E9815A1D1A18140045A110 /* ZXMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814B1D1A18140045A110 /* ZXMacro.swift */; };
+		33E9815B1D1A18140045A110 /* ZXOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814C1D1A18140045A110 /* ZXOnce.swift */; };
+		33E9815C1D1A18140045A110 /* ZXQuartzView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814D1D1A18140045A110 /* ZXQuartzView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,18 +36,22 @@
 		339080761C0BF810008C36F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		339080791C0BF810008C36F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3390807B1C0BF810008C36F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		339080821C0BF82A008C36F3 /* UIColor+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ZXTools.swift"; sourceTree = "<group>"; };
 		339080841C0BF87B008C36F3 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
-		339080861C0C1B2E008C36F3 /* NSDate+Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Today.swift"; sourceTree = "<group>"; };
-		339080871C0C1B2E008C36F3 /* NSDictionary+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+JSON.swift"; sourceTree = "<group>"; };
-		339080881C0C1B2E008C36F3 /* NSUserDefaults+Convenice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+Convenice.swift"; sourceTree = "<group>"; };
-		339080891C0C1B2E008C36F3 /* String+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ZXTools.swift"; sourceTree = "<group>"; };
-		3390808A1C0C1B2E008C36F3 /* UIImageView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animation.swift"; sourceTree = "<group>"; };
-		3390808B1C0C1B2E008C36F3 /* UILabel+MultipleColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+MultipleColor.swift"; sourceTree = "<group>"; };
-		3390808C1C0C1B2E008C36F3 /* UIView+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
-		3390808D1C0C1B2E008C36F3 /* UIView+Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Circle.swift"; sourceTree = "<group>"; };
-		3390808E1C0C1B2E008C36F3 /* UIWebView+JS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+JS.swift"; sourceTree = "<group>"; };
-		339080981C0C1E7B008C36F3 /* NSObject+Fire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Fire.swift"; sourceTree = "<group>"; };
+		33E9813F1D1A18140045A110 /* NSDate+Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Today.swift"; sourceTree = "<group>"; };
+		33E981401D1A18140045A110 /* NSDictionary+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+JSON.swift"; sourceTree = "<group>"; };
+		33E981411D1A18140045A110 /* NSUserDefaults+Convenice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+Convenice.swift"; sourceTree = "<group>"; };
+		33E981421D1A18140045A110 /* String+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ZXTools.swift"; sourceTree = "<group>"; };
+		33E981431D1A18140045A110 /* UIColor+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ZXTools.swift"; sourceTree = "<group>"; };
+		33E981441D1A18140045A110 /* UIImageView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animation.swift"; sourceTree = "<group>"; };
+		33E981451D1A18140045A110 /* UILabel+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+ZXTools.swift"; sourceTree = "<group>"; };
+		33E981461D1A18140045A110 /* UIView+Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Circle.swift"; sourceTree = "<group>"; };
+		33E981471D1A18140045A110 /* UIView+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
+		33E981481D1A18140045A110 /* UIView+Render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Render.swift"; sourceTree = "<group>"; };
+		33E981491D1A18140045A110 /* UIView+ZXQuartz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ZXQuartz.swift"; sourceTree = "<group>"; };
+		33E9814A1D1A18140045A110 /* UIWebView+JS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+JS.swift"; sourceTree = "<group>"; };
+		33E9814B1D1A18140045A110 /* ZXMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXMacro.swift; sourceTree = "<group>"; };
+		33E9814C1D1A18140045A110 /* ZXOnce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXOnce.swift; sourceTree = "<group>"; };
+		33E9814D1D1A18140045A110 /* ZXQuartzView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXQuartzView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +84,7 @@
 		3390806E1C0BF810008C36F3 /* demo */ = {
 			isa = PBXGroup;
 			children = (
-				339080811C0BF82A008C36F3 /* Tools */,
+				33E9813E1D1A18140045A110 /* Tools */,
 				3390806F1C0BF810008C36F3 /* AppDelegate.swift */,
 				339080841C0BF87B008C36F3 /* Menu.swift */,
 				339080731C0BF810008C36F3 /* Main.storyboard */,
@@ -87,20 +95,24 @@
 			path = demo;
 			sourceTree = "<group>";
 		};
-		339080811C0BF82A008C36F3 /* Tools */ = {
+		33E9813E1D1A18140045A110 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				339080821C0BF82A008C36F3 /* UIColor+ZXTools.swift */,
-				339080861C0C1B2E008C36F3 /* NSDate+Today.swift */,
-				339080871C0C1B2E008C36F3 /* NSDictionary+JSON.swift */,
-				339080881C0C1B2E008C36F3 /* NSUserDefaults+Convenice.swift */,
-				339080891C0C1B2E008C36F3 /* String+ZXTools.swift */,
-				3390808A1C0C1B2E008C36F3 /* UIImageView+Animation.swift */,
-				3390808B1C0C1B2E008C36F3 /* UILabel+MultipleColor.swift */,
-				3390808C1C0C1B2E008C36F3 /* UIView+Constraint.swift */,
-				3390808D1C0C1B2E008C36F3 /* UIView+Circle.swift */,
-				3390808E1C0C1B2E008C36F3 /* UIWebView+JS.swift */,
-				339080981C0C1E7B008C36F3 /* NSObject+Fire.swift */,
+				33E9813F1D1A18140045A110 /* NSDate+Today.swift */,
+				33E981401D1A18140045A110 /* NSDictionary+JSON.swift */,
+				33E981411D1A18140045A110 /* NSUserDefaults+Convenice.swift */,
+				33E981421D1A18140045A110 /* String+ZXTools.swift */,
+				33E981431D1A18140045A110 /* UIColor+ZXTools.swift */,
+				33E981441D1A18140045A110 /* UIImageView+Animation.swift */,
+				33E981451D1A18140045A110 /* UILabel+ZXTools.swift */,
+				33E981461D1A18140045A110 /* UIView+Circle.swift */,
+				33E981471D1A18140045A110 /* UIView+Constraint.swift */,
+				33E981481D1A18140045A110 /* UIView+Render.swift */,
+				33E981491D1A18140045A110 /* UIView+ZXQuartz.swift */,
+				33E9814A1D1A18140045A110 /* UIWebView+JS.swift */,
+				33E9814B1D1A18140045A110 /* ZXMacro.swift */,
+				33E9814C1D1A18140045A110 /* ZXOnce.swift */,
+				33E9814D1D1A18140045A110 /* ZXQuartzView.swift */,
 			);
 			name = Tools;
 			path = ../../Tools;
@@ -177,19 +189,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				339080921C0C1B2E008C36F3 /* String+ZXTools.swift in Sources */,
-				339080911C0C1B2E008C36F3 /* NSUserDefaults+Convenice.swift in Sources */,
-				3390808F1C0C1B2E008C36F3 /* NSDate+Today.swift in Sources */,
+				33E981551D1A18140045A110 /* UIView+Circle.swift in Sources */,
+				33E981581D1A18140045A110 /* UIView+ZXQuartz.swift in Sources */,
 				339080851C0BF87B008C36F3 /* Menu.swift in Sources */,
-				339080971C0C1B2E008C36F3 /* UIWebView+JS.swift in Sources */,
+				33E981571D1A18140045A110 /* UIView+Render.swift in Sources */,
 				339080701C0BF810008C36F3 /* AppDelegate.swift in Sources */,
-				339080931C0C1B2E008C36F3 /* UIImageView+Animation.swift in Sources */,
-				339080941C0C1B2E008C36F3 /* UILabel+MultipleColor.swift in Sources */,
-				339080951C0C1B2E008C36F3 /* UIView+Constraint.swift in Sources */,
-				339080831C0BF82A008C36F3 /* UIColor+ZXTools.swift in Sources */,
-				339080961C0C1B2E008C36F3 /* UIView+Circle.swift in Sources */,
-				339080991C0C1E7B008C36F3 /* NSObject+Fire.swift in Sources */,
-				339080901C0C1B2E008C36F3 /* NSDictionary+JSON.swift in Sources */,
+				33E9815C1D1A18140045A110 /* ZXQuartzView.swift in Sources */,
+				33E981521D1A18140045A110 /* UIColor+ZXTools.swift in Sources */,
+				33E981511D1A18140045A110 /* String+ZXTools.swift in Sources */,
+				33E9814F1D1A18140045A110 /* NSDictionary+JSON.swift in Sources */,
+				33E981591D1A18140045A110 /* UIWebView+JS.swift in Sources */,
+				33E981531D1A18140045A110 /* UIImageView+Animation.swift in Sources */,
+				33E9814E1D1A18140045A110 /* NSDate+Today.swift in Sources */,
+				33E981501D1A18140045A110 /* NSUserDefaults+Convenice.swift in Sources */,
+				33E981541D1A18140045A110 /* UILabel+ZXTools.swift in Sources */,
+				33E9815A1D1A18140045A110 /* ZXMacro.swift in Sources */,
+				33E9815B1D1A18140045A110 /* ZXOnce.swift in Sources */,
+				33E981561D1A18140045A110 /* UIView+Constraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +355,7 @@
 				339080801C0BF810008C36F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

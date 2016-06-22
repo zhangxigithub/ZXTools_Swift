@@ -8,11 +8,16 @@
 
 import Foundation
 
-extension String
+public extension String
 {
     func stringRemovedLastChar()->String
     {
         let last1 = self.endIndex.advancedBy(-1)
         return self.substringToIndex(last1)
+    }
+    
+    func encodeURL() -> NSURL
+    {
+        return NSURL(string: self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!;
     }
 }
