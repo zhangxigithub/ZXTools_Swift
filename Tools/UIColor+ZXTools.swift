@@ -11,16 +11,16 @@ import UIKit
 public extension UIColor
 {
 
-    convenience init(rgb r:Int,g:Int,b:Int) {
+    public convenience init(rgb r:Int,g:Int,b:Int) {
         self.init(red: CGFloat(r)/CGFloat(255.0), green: CGFloat(g)/CGFloat(255.0),blue: CGFloat(b)/CGFloat(255.0),alpha: 1)
     }
     
-    convenience init(rgba r:Int,g:Int,b:Int,a:Float) {
+    public convenience init(rgba r:Int,g:Int,b:Int,a:Float) {
         self.init(red: CGFloat(r)/CGFloat(255.0), green: CGFloat(g)/CGFloat(255.0),blue: CGFloat(b)/CGFloat(255.0),alpha: CGFloat(a))
     }
     
 
-    convenience init(hexString: String) {
+    public convenience init(hexString: String) {
        
         var red:   CGFloat = 0.0
         var green: CGFloat = 0.0

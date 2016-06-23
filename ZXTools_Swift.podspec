@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "ZXTools_Swift"
-  s.version      = "0.1.9"
+  s.version      = "0.2.0"
   s.summary      = "ZXTools_Swift"
 
 
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   s.source_files  = "Tools/**/*.{swift}"
 
 
-  #s.exclude_files = "Classes/Exclude"
+  # s.exclude_files = "Classes/Exclude"
   # s.public_header_files = "Classes/**/*.h"
 
 

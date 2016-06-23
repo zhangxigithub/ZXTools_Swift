@@ -10,7 +10,7 @@ import UIKit
 
 public class ZXOnce {
 
-    class func run(key:String,once:(()->Void)?,another:(()->Void)?)
+    public class func run(key:String,once:(()->Void)?,another:(()->Void)?)
     {
         let realKey = key+".zhangxi.once"
         if let _  = NSUserDefaults.standardUserDefaults().objectForKey(realKey)
@@ -22,6 +22,12 @@ public class ZXOnce {
             NSUserDefaults.standardUserDefaults().setObject("finished", forKey: realKey)
             NSUserDefaults.standardUserDefaults().synchronize()
         }
+    }
+    public class func clean(key:String)
+    {
+        let realKey = key+".zhangxi.once"
+        NSUserDefaults.standardUserDefaults().removeObjectForKey(realKey)
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
 }
 

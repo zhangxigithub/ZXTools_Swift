@@ -11,7 +11,7 @@ import UIKit
 public extension UILabel
 {
     
-    func setMultipleColorText(texts:Array<(color:UIColor,text:String)>)
+    public func setMultipleColorText(texts:Array<(color:UIColor,text:String)>)
     {
         
         var string = ""

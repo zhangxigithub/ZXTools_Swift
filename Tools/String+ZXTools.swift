@@ -10,13 +10,13 @@ import Foundation
 
 public extension String
 {
-    func stringRemovedLastChar()->String
+    public func stringRemovedLastChar()->String
     {
         let last1 = self.endIndex.advancedBy(-1)
         return self.substringToIndex(last1)
     }
     
-    func encodeURL() -> NSURL
+    public func encodeURL() -> NSURL
     {
         return NSURL(string: self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!;
     }

@@ -28,8 +28,6 @@ public extension UIWebView
         return self.stringByEvaluatingJavaScriptFromString(theJS)
     }
     
-    
-    
 
     func loadURL(url:NSURL?)
     {

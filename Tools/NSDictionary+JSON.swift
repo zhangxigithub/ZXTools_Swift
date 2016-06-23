@@ -12,7 +12,7 @@ import Foundation
 public extension NSDictionary
 {
 
-    func JSONString()->String?
+    public func JSONString()->String?
     {
         let data = try? NSJSONSerialization.dataWithJSONObject(self, options: NSJSONWritingOptions.PrettyPrinted)
         if data == nil

@@ -11,7 +11,7 @@ import Foundation
 public extension NSDate
 {
     
-    func isToday() -> Bool
+    public func isToday() -> Bool
     {
         
         let second = Int(NSDate().timeIntervalSince1970) - (Int(NSDate().timeIntervalSince1970) % Int(60*60*24))

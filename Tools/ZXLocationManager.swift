@@ -33,8 +33,6 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
         self.handler = handler
         
         locationManager.desiredAccuracy = desiredAccuracy
-        locationManager.startUpdatingLocation()
-        
     }
     public func reverseGeocodeLocation(location:CLLocation,handler:CLGeocodeCompletionHandler)
     {
@@ -42,34 +40,28 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
         geocoder.reverseGeocodeLocation(location, completionHandler: handler)
     }
     
-    /*
-     CLGeocoder *theGeocoder = [[CLGeocoder alloc] init];
-     [geo addObject:theGeocoder];
-     CLLocation *location = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-     
-     [theGeocoder reverseGeocodeLocation:location
-     completionHandler:^(NSArray *placemarks, NSError *error) {
-     
-     NSLog(@"获取到位置");
-     if(error != nil){
-     */
     
     public func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.handler?(manager: manager,location:locations.first)
     }
     
+    public func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        switch status {
     
+        case .NotDetermined:
+            break;
+        case .Restricted:
+            break;
+        case .Denied:
+            break;
+        case .AuthorizedAlways:
+            break;
+        case .AuthorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+            break;
+        }
+    }
     
-    
-    
-    /*
-     CLLocationManager *locationManager;
-     id geocoder;
-     
-     void(^locationInfo)(CLLocation *);
-     void(^placeMark)(MKPlacemark *);
-     
-     NSMutableArray *geo;
-     */
+
     
 }
