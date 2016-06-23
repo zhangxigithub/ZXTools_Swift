@@ -23,6 +23,4 @@ public extension NSUserDefaults
             NSUserDefaults.standardUserDefaults().synchronize()
         }
     }
-    
-
 }

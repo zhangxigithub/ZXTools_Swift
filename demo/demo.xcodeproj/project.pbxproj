@@ -16,7 +16,7 @@
 		339080851C0BF87B008C36F3 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339080841C0BF87B008C36F3 /* Menu.swift */; };
 		33E9814E1D1A18140045A110 /* NSDate+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9813F1D1A18140045A110 /* NSDate+Today.swift */; };
 		33E9814F1D1A18140045A110 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981401D1A18140045A110 /* NSDictionary+JSON.swift */; };
-		33E981501D1A18140045A110 /* NSUserDefaults+Convenice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981411D1A18140045A110 /* NSUserDefaults+Convenice.swift */; };
+		33E981501D1A18140045A110 /* NSUserDefaults+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981411D1A18140045A110 /* NSUserDefaults+ZXTools.swift */; };
 		33E981511D1A18140045A110 /* String+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981421D1A18140045A110 /* String+ZXTools.swift */; };
 		33E981521D1A18140045A110 /* UIColor+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981431D1A18140045A110 /* UIColor+ZXTools.swift */; };
 		33E981531D1A18140045A110 /* UIImageView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981441D1A18140045A110 /* UIImageView+Animation.swift */; };
@@ -32,6 +32,7 @@
 		33E9819A1D1B70A30045A110 /* ZXLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981991D1B70A30045A110 /* ZXLocationManager.swift */; };
 		33E9819C1D1B70BF0045A110 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9819B1D1B70BE0045A110 /* CoreLocation.framework */; };
 		33E9819E1D1B71010045A110 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9819D1D1B71010045A110 /* MultipeerConnectivity.framework */; };
+		33E981A01D1B7C790045A110 /* NSURL+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9819F1D1B7C790045A110 /* NSURL+ZXTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +48,7 @@
 		339080841C0BF87B008C36F3 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		33E9813F1D1A18140045A110 /* NSDate+Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Today.swift"; sourceTree = "<group>"; };
 		33E981401D1A18140045A110 /* NSDictionary+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+JSON.swift"; sourceTree = "<group>"; };
-		33E981411D1A18140045A110 /* NSUserDefaults+Convenice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+Convenice.swift"; sourceTree = "<group>"; };
+		33E981411D1A18140045A110 /* NSUserDefaults+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+ZXTools.swift"; sourceTree = "<group>"; };
 		33E981421D1A18140045A110 /* String+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ZXTools.swift"; sourceTree = "<group>"; };
 		33E981431D1A18140045A110 /* UIColor+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ZXTools.swift"; sourceTree = "<group>"; };
 		33E981441D1A18140045A110 /* UIImageView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animation.swift"; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		33E981991D1B70A30045A110 /* ZXLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXLocationManager.swift; sourceTree = "<group>"; };
 		33E9819B1D1B70BE0045A110 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		33E9819D1D1B71010045A110 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		33E9819F1D1B7C790045A110 /* NSURL+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+ZXTools.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +121,7 @@
 				33460B8D1D1ACD1300B24F0B /* Bonjour.swift */,
 				33E9813F1D1A18140045A110 /* NSDate+Today.swift */,
 				33E981401D1A18140045A110 /* NSDictionary+JSON.swift */,
-				33E981411D1A18140045A110 /* NSUserDefaults+Convenice.swift */,
+				33E981411D1A18140045A110 /* NSUserDefaults+ZXTools.swift */,
 				33E981421D1A18140045A110 /* String+ZXTools.swift */,
 				33E981431D1A18140045A110 /* UIColor+ZXTools.swift */,
 				33E981441D1A18140045A110 /* UIImageView+Animation.swift */,
@@ -129,6 +131,7 @@
 				33E981481D1A18140045A110 /* UIView+Render.swift */,
 				33E981491D1A18140045A110 /* UIView+ZXQuartz.swift */,
 				33E9814A1D1A18140045A110 /* UIWebView+JS.swift */,
+				33E9819F1D1B7C790045A110 /* NSURL+ZXTools.swift */,
 				33E9814B1D1A18140045A110 /* ZXMacro.swift */,
 				33E9814C1D1A18140045A110 /* ZXOnce.swift */,
 				33E9814D1D1A18140045A110 /* ZXQuartzView.swift */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E981A01D1B7C790045A110 /* NSURL+ZXTools.swift in Sources */,
 				33E981551D1A18140045A110 /* UIView+Circle.swift in Sources */,
 				33E981581D1A18140045A110 /* UIView+ZXQuartz.swift in Sources */,
 				339080851C0BF87B008C36F3 /* Menu.swift in Sources */,
@@ -223,7 +227,7 @@
 				33E981531D1A18140045A110 /* UIImageView+Animation.swift in Sources */,
 				33460B8E1D1ACD1300B24F0B /* Bonjour.swift in Sources */,
 				33E9814E1D1A18140045A110 /* NSDate+Today.swift in Sources */,
-				33E981501D1A18140045A110 /* NSUserDefaults+Convenice.swift in Sources */,
+				33E981501D1A18140045A110 /* NSUserDefaults+ZXTools.swift in Sources */,
 				33E981541D1A18140045A110 /* UILabel+ZXTools.swift in Sources */,
 				33E9815A1D1A18140045A110 /* ZXMacro.swift in Sources */,
 				33E9815B1D1A18140045A110 /* ZXOnce.swift in Sources */,
