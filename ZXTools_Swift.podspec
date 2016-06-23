@@ -2,16 +2,11 @@ Pod::Spec.new do |s|
 
 
   s.name         = "ZXTools_Swift"
-  s.version      = "0.1.6"
+  s.version      = "0.1.7"
   s.summary      = "ZXTools_Swift"
 
 
-  s.description  = <<-DESC
-
-                   ZXTools_Swift.
-
-                   DESC
-
+  s.description  = "zhangxi's Toolbox in Swift"
   s.homepage     = "https://github.com/zhangxigithub/ZXTools_Swift"
 
 
