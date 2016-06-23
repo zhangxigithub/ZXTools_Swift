@@ -29,6 +29,9 @@
 		33E9815A1D1A18140045A110 /* ZXMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814B1D1A18140045A110 /* ZXMacro.swift */; };
 		33E9815B1D1A18140045A110 /* ZXOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814C1D1A18140045A110 /* ZXOnce.swift */; };
 		33E9815C1D1A18140045A110 /* ZXQuartzView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814D1D1A18140045A110 /* ZXQuartzView.swift */; };
+		33E9819A1D1B70A30045A110 /* ZXLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981991D1B70A30045A110 /* ZXLocationManager.swift */; };
+		33E9819C1D1B70BF0045A110 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9819B1D1B70BE0045A110 /* CoreLocation.framework */; };
+		33E9819E1D1B71010045A110 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9819D1D1B71010045A110 /* MultipeerConnectivity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		33E9814B1D1A18140045A110 /* ZXMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXMacro.swift; sourceTree = "<group>"; };
 		33E9814C1D1A18140045A110 /* ZXOnce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXOnce.swift; sourceTree = "<group>"; };
 		33E9814D1D1A18140045A110 /* ZXQuartzView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXQuartzView.swift; sourceTree = "<group>"; };
+		33E981991D1B70A30045A110 /* ZXLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXLocationManager.swift; sourceTree = "<group>"; };
+		33E9819B1D1B70BE0045A110 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		33E9819D1D1B71010045A110 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E9819E1D1B71010045A110 /* MultipeerConnectivity.framework in Frameworks */,
+				33E9819C1D1B70BF0045A110 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +81,8 @@
 		339080631C0BF810008C36F3 = {
 			isa = PBXGroup;
 			children = (
+				33E9819D1D1B71010045A110 /* MultipeerConnectivity.framework */,
+				33E9819B1D1B70BE0045A110 /* CoreLocation.framework */,
 				3390806E1C0BF810008C36F3 /* demo */,
 				3390806D1C0BF810008C36F3 /* Products */,
 			);
@@ -104,6 +114,7 @@
 		33E9813E1D1A18140045A110 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				33E981991D1B70A30045A110 /* ZXLocationManager.swift */,
 				33460B8F1D1ACE1700B24F0B /* ZXTimer.swift */,
 				33460B8D1D1ACD1300B24F0B /* Bonjour.swift */,
 				33E9813F1D1A18140045A110 /* NSDate+Today.swift */,
@@ -201,6 +212,7 @@
 				33E981581D1A18140045A110 /* UIView+ZXQuartz.swift in Sources */,
 				339080851C0BF87B008C36F3 /* Menu.swift in Sources */,
 				33E981571D1A18140045A110 /* UIView+Render.swift in Sources */,
+				33E9819A1D1B70A30045A110 /* ZXLocationManager.swift in Sources */,
 				339080701C0BF810008C36F3 /* AppDelegate.swift in Sources */,
 				33E9815C1D1A18140045A110 /* ZXQuartzView.swift in Sources */,
 				33460B901D1ACE1700B24F0B /* ZXTimer.swift in Sources */,

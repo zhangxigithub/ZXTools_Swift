@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "ZXTools_Swift"
-  s.version      = "0.1.7"
+  s.version      = "0.1.8"
   s.summary      = "ZXTools_Swift"
 
 
@@ -77,7 +77,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+  s.frameworks  = "CoreLocation", "MultipeerConnectivity"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"

@@ -24,6 +24,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
 
+        ZXLocationManager.sharedManager.locate { (manager, location) in
+         
+            manager.stopUpdatingLocation()
+            
+            ZXLocationManager.sharedManager.reverseGeocodeLocation(location!, handler: { (marks, error) in
+                print(marks)
+            })
+            
+            print(location)
+        }
         
         return true
 
