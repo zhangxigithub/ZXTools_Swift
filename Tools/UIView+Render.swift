@@ -113,8 +113,13 @@ public extension UIView
     
     
     
-    
-    
+    func tap(target: AnyObject?, action: Selector) -> UITapGestureRecognizer
+    {
+        let tap = UITapGestureRecognizer(target: target, action: action)
+        self.userInteractionEnabled = true
+        self.addGestureRecognizer(tap)
+        return tap
+    }
     
     
     class func xib(xib:String) -> UIView?

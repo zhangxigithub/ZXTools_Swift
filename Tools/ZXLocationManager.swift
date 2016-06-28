@@ -14,7 +14,7 @@ public typealias LocationHandler = (manager:CLLocationManager,location:CLLocatio
 
 public class ZXLocationManager : NSObject,CLLocationManagerDelegate
 {
-    static let sharedManager = ZXLocationManager()
+    public static let sharedManager = ZXLocationManager()
     
     let locationManager = CLLocationManager()
     let geocoder     = CLGeocoder()
