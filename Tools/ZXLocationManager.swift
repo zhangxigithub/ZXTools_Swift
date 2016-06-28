@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 public typealias LocationHandler = (manager:CLLocationManager,location:CLLocation?) -> Void
-
+public typealias FindCityHandler = (city:String?) -> Void
 
 public class ZXLocationManager : NSObject,CLLocationManagerDelegate
 {
@@ -19,12 +19,19 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
     let locationManager = CLLocationManager()
     let geocoder     = CLGeocoder()
     var handler:LocationHandler?
+    var findCityHandler:FindCityHandler?
     
     override init() {
         super.init()
         locationManager.delegate = self
     }
-    
+
+    public func findCity(handler:(city:String?) -> Void)
+    {
+        self.locationManager.requestWhenInUseAuthorization()
+        self.findCityHandler = handler
+        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+    }
     
     
     public func locate(desiredAccuracy:CLLocationAccuracy = kCLLocationAccuracyBest, handler:LocationHandler? = nil)
@@ -43,6 +50,23 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
     
     public func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.handler?(manager: manager,location:locations.first)
+        
+        
+        if findCityHandler != nil && locations.first != nil
+        {
+            manager.stopUpdatingLocation()
+            
+            self.reverseGeocodeLocation(locations.first!, handler: { (marks, error) in
+                
+                if let mark = marks?.first
+                {
+                    print(mark.locality)
+                    self.findCityHandler?(city: mark.locality)
+                }
+
+            })
+        }
+        
     }
     
     public func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {

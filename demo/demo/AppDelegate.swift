@@ -23,17 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("not first")
         }
         
-
-        ZXLocationManager.sharedManager.locate { (manager, location) in
-         
-            manager.stopUpdatingLocation()
-            
-            ZXLocationManager.sharedManager.reverseGeocodeLocation(location!, handler: { (marks, error) in
-                print(marks)
-            })
-            
-            print(location)
+        ZXLocationManager.sharedManager.findCity { (city) in
+            print(city)
         }
+
+//        ZXLocationManager.sharedManager.locate { (manager, location) in
+//         
+//            manager.stopUpdatingLocation()
+//            
+//            ZXLocationManager.sharedManager.reverseGeocodeLocation(location!, handler: { (marks, error) in
+//                print(marks)
+//            })
+//            
+//            print(location)
+//        }
         
         return true
 
