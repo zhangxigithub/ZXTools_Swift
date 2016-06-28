@@ -14,6 +14,7 @@
 		339080771C0BF810008C36F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339080761C0BF810008C36F3 /* Assets.xcassets */; };
 		3390807A1C0BF810008C36F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339080781C0BF810008C36F3 /* LaunchScreen.storyboard */; };
 		339080851C0BF87B008C36F3 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339080841C0BF87B008C36F3 /* Menu.swift */; };
+		33C3ADB51D22984B00D25A60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3ADB41D22984B00D25A60 /* ViewController.swift */; };
 		33E9814E1D1A18140045A110 /* NSDate+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9813F1D1A18140045A110 /* NSDate+Today.swift */; };
 		33E9814F1D1A18140045A110 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981401D1A18140045A110 /* NSDictionary+JSON.swift */; };
 		33E981501D1A18140045A110 /* NSUserDefaults+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981411D1A18140045A110 /* NSUserDefaults+ZXTools.swift */; };
@@ -46,6 +47,7 @@
 		339080791C0BF810008C36F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3390807B1C0BF810008C36F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		339080841C0BF87B008C36F3 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		33C3ADB41D22984B00D25A60 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33E9813F1D1A18140045A110 /* NSDate+Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Today.swift"; sourceTree = "<group>"; };
 		33E981401D1A18140045A110 /* NSDictionary+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+JSON.swift"; sourceTree = "<group>"; };
 		33E981411D1A18140045A110 /* NSUserDefaults+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+ZXTools.swift"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				3390806F1C0BF810008C36F3 /* AppDelegate.swift */,
 				33460B911D1AD25B00B24F0B /* MyPlayground.playground */,
 				339080841C0BF87B008C36F3 /* Menu.swift */,
+				33C3ADB41D22984B00D25A60 /* ViewController.swift */,
 				339080731C0BF810008C36F3 /* Main.storyboard */,
 				339080761C0BF810008C36F3 /* Assets.xcassets */,
 				339080781C0BF810008C36F3 /* LaunchScreen.storyboard */,
@@ -215,6 +218,7 @@
 				33E981551D1A18140045A110 /* UIView+Circle.swift in Sources */,
 				33E981581D1A18140045A110 /* UIView+ZXQuartz.swift in Sources */,
 				339080851C0BF87B008C36F3 /* Menu.swift in Sources */,
+				33C3ADB51D22984B00D25A60 /* ViewController.swift in Sources */,
 				33E981571D1A18140045A110 /* UIView+Render.swift in Sources */,
 				33E9819A1D1B70A30045A110 /* ZXLocationManager.swift in Sources */,
 				339080701C0BF810008C36F3 /* AppDelegate.swift in Sources */,
