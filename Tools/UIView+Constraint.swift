@@ -10,8 +10,9 @@ import UIKit
 
 public extension UIView
 {
-    public func widthConstraint() -> NSLayoutConstraint?
+    public func widthConstraints() -> Array<NSLayoutConstraint>
     {
+        var result = [NSLayoutConstraint]()
         for c in self.constraints
         {
             if c.firstAttribute == .Width &&
@@ -19,13 +20,15 @@ public extension UIView
                 c.secondAttribute == .NotAnAttribute &&
                 (c.secondItem as? NSObject) == nil
             {
-                return c
+                result.append(c)
             }
         }
-        return nil
+        return result
     }
-    public func heightConstraint() -> NSLayoutConstraint?
+    
+    public func heightConstraints() -> Array<NSLayoutConstraint>
     {
+        var result = [NSLayoutConstraint]()
         for c in self.constraints
         {
             if c.firstAttribute == .Height &&
@@ -33,21 +36,26 @@ public extension UIView
                 c.secondAttribute == .NotAnAttribute &&
                 (c.secondItem as? NSObject) == nil
             {
-                return c
+                result.append(c)
             }
         }
-        return nil
+        return result
     }
     
     public func fitWidth()
     {
         let size = self.sizeThatFits(CGSizeZero)
-        self.widthConstraint()?.constant = size.width
+        self.widthConstraints().forEach {
+            $0.constant = size.width
+        }
     }
+    
     public func fitHeight()
     {
         let size = self.sizeThatFits(CGSizeZero)
-        self.heightConstraint()?.constant = size.height
+        self.widthConstraints().forEach {
+            $0.constant = size.height
+        }
     }
     
     
