@@ -45,16 +45,25 @@ public extension UIView
     public func fitWidth()
     {
         let size = self.sizeThatFits(CGSizeZero)
-        self.widthConstraints().forEach {
-            $0.constant = size.width
-        }
+        changeWidth(size.width)
     }
     
     public func fitHeight()
     {
         let size = self.sizeThatFits(CGSizeZero)
+        changeWidth(size.height)
+    }
+    public func changeWidth(width:CGFloat)
+    {
         self.widthConstraints().forEach {
-            $0.constant = size.height
+            $0.constant = width
+        }
+    }
+    
+    public func changeHeight(height:CGFloat)
+    {
+        self.widthConstraints().forEach {
+            $0.constant = height
         }
     }
     
