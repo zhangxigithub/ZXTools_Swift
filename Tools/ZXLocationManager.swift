@@ -29,12 +29,6 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
     public func findCity(handler:(city:String?) -> Void)
     {
         self.findCityHandler = handler
-
-        if CLLocationManager.authorizationStatus() == .Denied
-        {
-            self.findCityHandler?(city:nil)
-            return
-        }
         
         self.locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
@@ -70,7 +64,6 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
                     print(mark.locality)
                     self.findCityHandler?(city: mark.locality)
                 }
-
             })
         }
         
@@ -84,7 +77,7 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
         case .Restricted:
             break;
         case .Denied:
-            break;
+            self.findCityHandler?(city:nil)
         case .AuthorizedAlways:
             break;
         case .AuthorizedWhenInUse:
