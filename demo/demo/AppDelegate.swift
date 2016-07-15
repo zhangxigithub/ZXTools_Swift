@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         ZXLocationManager.sharedManager.findCity { (city) in
-            print(city)
+            print("find city : \(city)")
         }
 
 //        ZXLocationManager.sharedManager.locate { (manager, location) in

@@ -28,8 +28,15 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
 
     public func findCity(handler:(city:String?) -> Void)
     {
-        self.locationManager.requestWhenInUseAuthorization()
         self.findCityHandler = handler
+
+        if CLLocationManager.authorizationStatus() == .Denied
+        {
+            self.findCityHandler?(city:nil)
+            return
+        }
+        
+        self.locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
     }
     
