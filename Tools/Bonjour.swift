@@ -89,7 +89,7 @@ public class Bonjour: NSObject,MCSessionDelegate,MCNearbyServiceAdvertiserDelega
 
     //MARK: - MCNearbyServiceAdvertiserDelegate
     
-    public func advertiser(advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: NSData?, invitationHandler: (Bool, MCSession) -> Void)
+    public func advertiser(advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: NSData?, invitationHandler: (Bool, MCSession?) -> Void)
     {
         invitationHandler(true,session)
     }

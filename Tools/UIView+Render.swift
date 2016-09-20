@@ -125,7 +125,7 @@ public extension UIView
     class func xib(xib:String) -> UIView?
     {
         let views = NSBundle.mainBundle().loadNibNamed(xib, owner: nil, options: nil)
-        return views.first as? UIView
+        return views!.first as? UIView
     }
     
     

@@ -16,8 +16,8 @@ public extension UIView
     {
         let context = UIGraphicsGetCurrentContext()
         let path    = self.path(rect, radius: radius)
-        CGContextAddPath(context, path)
-        CGContextDrawPath(context, fillMode)
+        CGContextAddPath(context!, path)
+        CGContextDrawPath(context!, fillMode)
     }
 
 
@@ -33,17 +33,17 @@ public extension UIView
         {
             if i == 0
             {
-                CGContextMoveToPoint(context, point.x, point.y);
+                CGContextMoveToPoint(context!, point.x, point.y);
             }
             else if i == points.count - 1
             {
-                CGContextAddLineToPoint(context, point.x,point.y);
+                CGContextAddLineToPoint(context!, point.x,point.y);
             }else
             {
-                CGContextAddLineToPoint(context, start.x,start.y);
+                CGContextAddLineToPoint(context!, start.x,start.y);
             }
         }
-        CGContextDrawPath(context, fillMode)
+        CGContextDrawPath(context!, fillMode)
     }
     
     
@@ -58,23 +58,23 @@ public extension UIView
         let context = UIGraphicsGetCurrentContext()
         
         let r = CGFloat(radius)
-        CGContextAddArc(context,
+        CGContextAddArc(context!,
             center.x,
             center.y,
             r,
             CGFloat(start),
             CGFloat(end),
             0);
-        CGContextDrawPath(context, fillMode)
+        CGContextDrawPath(context!, fillMode)
     }
     
     func drawBezierCurve(start:CGPoint,end:CGPoint,control1:CGPoint,control2:CGPoint,fillMode:CGPathDrawingMode=CGPathDrawingMode.FillStroke)
     {
         let context = UIGraphicsGetCurrentContext()
         
-        CGContextMoveToPoint(context, start.x, start.y);
-        CGContextAddCurveToPoint(context, control1.x, control1.y, control1.x, control1.y, end.x, end.y)
-        CGContextDrawPath(context, fillMode)
+        CGContextMoveToPoint(context!, start.x, start.y);
+        CGContextAddCurveToPoint(context!, control1.x, control1.y, control1.x, control1.y, end.x, end.y)
+        CGContextDrawPath(context!, fillMode)
     }
     
     func drawLine(start:CGPoint,end:CGPoint,fillMode:CGPathDrawingMode=CGPathDrawingMode.FillStroke)
@@ -91,13 +91,13 @@ public extension UIView
         {
             if i == 0
             {
-                CGContextMoveToPoint(context, point.x, point.y);
+                CGContextMoveToPoint(context!, point.x, point.y);
             }else
             {
-                CGContextAddLineToPoint(context, point.x,point.y);
+                CGContextAddLineToPoint(context!, point.x,point.y);
             }
         }
-        CGContextDrawPath(context, fillMode)
+        CGContextDrawPath(context!, fillMode)
     }
 
     
@@ -113,7 +113,7 @@ public extension UIView
     func drawShadow(offset:CGSize, blur:CGFloat, color:CGColor?=nil)
     {
         let context = UIGraphicsGetCurrentContext()
-        CGContextSetShadowWithColor(context, offset, blur, color)
+        CGContextSetShadowWithColor(context!, offset, blur, color)
     }
 
     func path(frame:CGRect,radius:Float) -> CGMutablePath
