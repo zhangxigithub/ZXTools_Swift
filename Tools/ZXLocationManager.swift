@@ -9,8 +9,8 @@
 import Foundation
 import CoreLocation
 
-public typealias LocationHandler = (manager:CLLocationManager,location:CLLocation?) -> Void
-public typealias FindCityHandler = (city:String?) -> Void
+public typealias LocationHandler = (CLLocationManager,CLLocation?) -> Void
+public typealias FindCityHandler = (String?) -> Void
 
 public class ZXLocationManager : NSObject,CLLocationManagerDelegate
 {
@@ -26,7 +26,7 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
         locationManager.delegate = self
     }
 
-    public func findCity(handler:(city:String?) -> Void)
+    public func findCity(handler:(String?) -> Void)
     {
         self.findCityHandler = handler
         
@@ -50,9 +50,9 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
     
     
     public func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.handler?(manager: manager,location:locations.first)
+        self.handler?(manager,locations.first)
         
-        
+
         if findCityHandler != nil && locations.first != nil
         {
             manager.stopUpdatingLocation()
@@ -62,7 +62,7 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
                 if let mark = marks?.first
                 {
                     print(mark.locality)
-                    self.findCityHandler?(city: mark.locality)
+                    self.findCityHandler?(mark.locality)
                 }
             })
         }
@@ -77,7 +77,7 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
         case .Restricted:
             break;
         case .Denied:
-            self.findCityHandler?(city:nil)
+            self.findCityHandler?(nil)
         case .AuthorizedAlways:
             break;
         case .AuthorizedWhenInUse:
