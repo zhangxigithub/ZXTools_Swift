@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "ZXTools_Swift"
-  s.version      = "2.3.0"
+  s.version      = "2.3.1"
   s.summary      = "ZXTools_Swift"
 
 
