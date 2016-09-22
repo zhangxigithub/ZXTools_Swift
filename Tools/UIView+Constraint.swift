@@ -62,7 +62,7 @@ public extension UIView
     
     public func changeHeight(height:CGFloat)
     {
-        self.widthConstraints().forEach {
+        self.heightConstraints().forEach {
             $0.constant = height
         }
     }
