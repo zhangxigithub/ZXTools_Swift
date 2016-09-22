@@ -51,7 +51,7 @@ public extension UIView
     public func fitHeight()
     {
         let size = self.sizeThatFits(CGSizeZero)
-        changeWidth(size.height)
+        changeHeight(size.height)
     }
     public func changeWidth(width:CGFloat)
     {
