@@ -13,22 +13,22 @@ import UIKit
 public extension UIView
 {
     enum RenderType {
-        case UIView
-        case UILabel
-        case UIImageView
-        case UIButton
-        case UISwitch
-        case UISegmentedControl
-        case UISlider
-        case UIActivityIndicatorView
-        case UIProgressView
-        case UIStepper
-        case UITableView
-        case UICollectionView
-        case UIScrollView
-        case UIWebView
-        case UITextView
-        case UITextField
+        case uiView
+        case uiLabel
+        case uiImageView
+        case uiButton
+        case uiSwitch
+        case uiSegmentedControl
+        case uiSlider
+        case uiActivityIndicatorView
+        case uiProgressView
+        case uiStepper
+        case uiTableView
+        case uiCollectionView
+        case uiScrollView
+        case uiWebView
+        case uiTextView
+        case uiTextField
     }
     
     subscript (tag:Int) -> AnyObject?
@@ -39,71 +39,71 @@ public extension UIView
     }
     
     
-    func view(tag:Int) -> UIView?
+    func view(_ tag:Int) -> UIView?
     {
         return self[tag] as? UIView
     }
-    func lable(tag:Int) -> UILabel?
+    func lable(_ tag:Int) -> UILabel?
     {
         return self[tag] as? UILabel
     }
-    func imageView(tag:Int) -> UIImageView?
+    func imageView(_ tag:Int) -> UIImageView?
     {
         return self[tag] as? UIImageView
     }
-    func button(tag:Int) -> UIButton?
+    func button(_ tag:Int) -> UIButton?
     {
         return self[tag] as? UIButton
     }
-    func textView(tag:Int) -> UITextView?
+    func textView(_ tag:Int) -> UITextView?
     {
         return self[tag] as? UITextView
     }
-    func textField(tag:Int) -> UITextField?
+    func textField(_ tag:Int) -> UITextField?
     {
         return self[tag] as? UITextField
     }
-    func segmentedControl(tag:Int) -> UISegmentedControl?
+    func segmentedControl(_ tag:Int) -> UISegmentedControl?
     {
         return self[tag] as? UISegmentedControl
     }
     
-    func slider(tag:Int) -> UISlider?
+    func slider(_ tag:Int) -> UISlider?
     {
         return self[tag] as? UISlider
     }
     
-    func activityIndicatorView(tag:Int) -> UIActivityIndicatorView?
+    func activityIndicatorView(_ tag:Int) -> UIActivityIndicatorView?
     {
         return self[tag] as? UIActivityIndicatorView
     }
     
-    func progressView(tag:Int) -> UIProgressView?
+    func progressView(_ tag:Int) -> UIProgressView?
     {
         return self[tag] as? UIProgressView
     }
     
-    func stepper(tag:Int) -> UIStepper?
+    func stepper(_ tag:Int) -> UIStepper?
     {
         return self[tag] as? UIStepper
     }
     
-    func tableView(tag:Int) -> UITableView?
+    func tableView(_ tag:Int) -> UITableView?
     {
         return self[tag] as? UITableView
     }
     
-    func collectionView(tag:Int) -> UICollectionView?
+    func collectionView(_ tag:Int) -> UICollectionView?
     {
         return self[tag] as? UICollectionView
     }
     
-    func scrollView(tag:Int) -> UIScrollView?
+    func scrollView(_ tag:Int) -> UIScrollView?
     {
         return self[tag] as? UIScrollView
     }
     
-    func webView(tag:Int) -> UIWebView?
+    func webView(_ tag:Int) -> UIWebView?
     {
         return self[tag] as? UIWebView
     }
@@ -113,23 +113,23 @@ public extension UIView
     
     
     
-    func tap(target: AnyObject?, action: Selector) -> UITapGestureRecognizer
+    func tap(_ target: AnyObject?, action: Selector) -> UITapGestureRecognizer
     {
         let tap = UITapGestureRecognizer(target: target, action: action)
-        self.userInteractionEnabled = true
+        self.isUserInteractionEnabled = true
         self.addGestureRecognizer(tap)
         return tap
     }
     
     
-    class func xib(xib:String) -> UIView?
+    class func xib(_ xib:String) -> UIView?
     {
-        let views = NSBundle.mainBundle().loadNibNamed(xib, owner: nil, options: nil)
+        let views = Bundle.main.loadNibNamed(xib, owner: nil, options: nil)
         return views!.first as? UIView
     }
     
     
-    func renderLabels(data:Dictionary<Int,String>) -> UIView
+    func renderLabels(_ data:Dictionary<Int,String>) -> UIView
     {
         for (tag,value) in data
         {

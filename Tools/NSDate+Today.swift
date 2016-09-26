@@ -8,13 +8,13 @@
 
 import Foundation
 
-public extension NSDate
+public extension Date
 {
     
     public func isToday() -> Bool
     {
         
-        let second = Int(NSDate().timeIntervalSince1970) - (Int(NSDate().timeIntervalSince1970) % Int(60*60*24))
+        let second = Int(Date().timeIntervalSince1970) - (Int(Date().timeIntervalSince1970) % Int(60*60*24))
         
         if Int(self.timeIntervalSince1970) > second
         {

@@ -8,20 +8,20 @@
 
 import Foundation
 
-public class ZXTimer
+open class ZXTimer
 {
-    private static let defaultIdentifiery = "me.zhangxi.timer.default"
-    private static var flags = [String:NSDate]()
+    fileprivate static let defaultIdentifiery = "me.zhangxi.timer.default"
+    fileprivate static var flags = [String:Date]()
     
-    public class func flag(identifier:String = defaultIdentifiery)
+    open class func flag(_ identifier:String = defaultIdentifiery)
     {
-        flags[identifier] = NSDate()
+        flags[identifier] = Date()
     }
-    public class func timeInterval(identifier:String = defaultIdentifiery) -> NSTimeInterval
+    open class func timeInterval(_ identifier:String = defaultIdentifiery) -> TimeInterval
     {
         if let date = flags[identifier]
         {
-            return NSDate().timeIntervalSinceDate(date)
+            return Date().timeIntervalSince(date)
         }else
         {
             return 0

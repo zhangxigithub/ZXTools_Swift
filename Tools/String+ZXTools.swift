@@ -12,12 +12,12 @@ public extension String
 {
     public func stringRemovedLastChar()->String
     {
-        let last1 = self.endIndex.advancedBy(-1)
-        return self.substringToIndex(last1)
+        let last1 = self.characters.index(self.endIndex, offsetBy: -1)
+        return self.substring(to: last1)
     }
     
-    public func encodeURL() -> NSURL
+    public func encodeURL() -> URL
     {
-        return NSURL(string: self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!;
+        return URL(string: self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!;
     }
 }

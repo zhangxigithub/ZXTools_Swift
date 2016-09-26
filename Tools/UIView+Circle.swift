@@ -12,7 +12,7 @@ import UIKit
 public extension UIView
 {
 
-    public func radius(adius:Float)
+    public func radius(_ adius:Float)
     {
         self.clipsToBounds = true
         self.layer.cornerRadius = CGFloat(adius)

@@ -12,9 +12,9 @@ import CoreLocation
 public typealias LocationHandler = (CLLocationManager,CLLocation?) -> Void
 public typealias FindCityHandler = (String?) -> Void
 
-public class ZXLocationManager : NSObject,CLLocationManagerDelegate
+open class ZXLocationManager : NSObject,CLLocationManagerDelegate
 {
-    public static let sharedManager = ZXLocationManager()
+    open static let sharedManager = ZXLocationManager()
     
     let locationManager = CLLocationManager()
     let geocoder     = CLGeocoder()
@@ -26,7 +26,7 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
         locationManager.delegate = self
     }
 
-    public func findCity(handler:(String?) -> Void)
+    open func findCity(_ handler:@escaping (String?) -> Void)
     {
         self.findCityHandler = handler
         
@@ -35,21 +35,21 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
     }
     
     
-    public func locate(desiredAccuracy:CLLocationAccuracy = kCLLocationAccuracyBest, handler:LocationHandler? = nil)
+    open func locate(_ desiredAccuracy:CLLocationAccuracy = kCLLocationAccuracyBest, handler:LocationHandler? = nil)
     {
         self.locationManager.requestWhenInUseAuthorization()
         self.handler = handler
         
         locationManager.desiredAccuracy = desiredAccuracy
     }
-    public func reverseGeocodeLocation(location:CLLocation,handler:CLGeocodeCompletionHandler)
+    open func reverseGeocodeLocation(_ location:CLLocation,handler:@escaping CLGeocodeCompletionHandler)
     {
         geocoder.cancelGeocode()
         geocoder.reverseGeocodeLocation(location, completionHandler: handler)
     }
     
     
-    public func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    open func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.handler?(manager,locations.first)
         
 
@@ -69,18 +69,18 @@ public class ZXLocationManager : NSObject,CLLocationManagerDelegate
         
     }
     
-    public func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    open func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
     
-        case .NotDetermined:
+        case .notDetermined:
             break;
-        case .Restricted:
+        case .restricted:
             break;
-        case .Denied:
+        case .denied:
             self.findCityHandler?(nil)
-        case .AuthorizedAlways:
+        case .authorizedAlways:
             break;
-        case .AuthorizedWhenInUse:
+        case .authorizedWhenInUse:
             locationManager.startUpdatingLocation()
             break;
         }

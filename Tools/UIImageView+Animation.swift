@@ -12,7 +12,7 @@ import UIKit
 public extension UIImageView
 {
     
-    public func animation(imageNames:Array<String>,time:NSTimeInterval=0.1,`repeat`:Int=0)
+    public func animation(_ imageNames:Array<String>,time:TimeInterval=0.1,repeat:Int=0)
     {
         var images = [UIImage]()
         
@@ -22,7 +22,7 @@ public extension UIImageView
             images.append(image!)
         }
         self.animationImages = images
-        self.animationDuration = NSTimeInterval(time * NSTimeInterval(imageNames.count))
+        self.animationDuration = TimeInterval(time * TimeInterval(imageNames.count))
         self.animationRepeatCount = `repeat`
         self.startAnimating()
     }

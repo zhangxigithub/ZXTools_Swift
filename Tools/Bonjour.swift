@@ -22,14 +22,14 @@ let BonjourNotificationMessageKey        = "BonjourNotificationMessageKey"
 
 @objc protocol BonjourDelegate
 {
-    optional func didConnectPeer(peerID:MCPeerID)
-    optional func didDisconnectPeer(peerID:MCPeerID)
-    optional func didReceiveMessage(message:String,peerID:MCPeerID)
+    @objc optional func didConnectPeer(_ peerID:MCPeerID)
+    @objc optional func didDisconnectPeer(_ peerID:MCPeerID)
+    @objc optional func didReceiveMessage(_ message:String,peerID:MCPeerID)
 }
 
 
 
-public class Bonjour: NSObject,MCSessionDelegate,MCNearbyServiceAdvertiserDelegate,MCNearbyServiceBrowserDelegate{
+open class Bonjour: NSObject,MCSessionDelegate,MCNearbyServiceAdvertiserDelegate,MCNearbyServiceBrowserDelegate{
     
     
     static let sharedBonjour: Bonjour = {
@@ -47,12 +47,12 @@ public class Bonjour: NSObject,MCSessionDelegate,MCNearbyServiceAdvertiserDelega
     var peerID : MCPeerID?
     let serviceType = "zx-bonjour"
     
-    func bonjour(name:String? = nil)
+    func bonjour(_ name:String? = nil)
     {
         
         if name == nil
         {
-            peerID = MCPeerID(displayName: UIDevice.currentDevice().name)
+            peerID = MCPeerID(displayName: UIDevice.current.name)
         }else
         {
             peerID = MCPeerID(displayName: name!)
@@ -74,11 +74,11 @@ public class Bonjour: NSObject,MCSessionDelegate,MCNearbyServiceAdvertiserDelega
         session.delegate = self
     }
     
-    func sendMessage(message:String,mode:MCSessionSendDataMode = MCSessionSendDataMode.Reliable)
+    func sendMessage(_ message:String,mode:MCSessionSendDataMode = MCSessionSendDataMode.reliable)
     {
         do {
-            let data = message.dataUsingEncoding(NSUTF8StringEncoding)!
-            try session.sendData(data, toPeers:session.connectedPeers, withMode: mode)
+            let data = message.data(using: String.Encoding.utf8)!
+            try session.send(data, toPeers:session.connectedPeers, with: mode)
         }
         catch
         {
@@ -89,12 +89,12 @@ public class Bonjour: NSObject,MCSessionDelegate,MCNearbyServiceAdvertiserDelega
 
     //MARK: - MCNearbyServiceAdvertiserDelegate
     
-    public func advertiser(advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: NSData?, invitationHandler: (Bool, MCSession?) -> Void)
+    open func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void)
     {
         invitationHandler(true,session)
     }
     
-    public func advertiser(advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: NSError)
+    open func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error)
     {
     }
     
@@ -102,59 +102,59 @@ public class Bonjour: NSObject,MCSessionDelegate,MCNearbyServiceAdvertiserDelega
     
     //MARK: - MCNearbyServiceBrowserDelegate
     
-    public func browser(browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?)
+    open func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?)
     {
-        browser.invitePeer(peerID, toSession: session, withContext: nil, timeout: 20)
+        browser.invitePeer(peerID, to: session, withContext: nil, timeout: 20)
     }
     
-    public func browser(browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID)
+    open func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID)
     {
-        browser.invitePeer(peerID, toSession: session, withContext: nil, timeout: 20)
+        browser.invitePeer(peerID, to: session, withContext: nil, timeout: 20)
     }
     
     
     
     //MARK: - MCSessionDelegate
     
-    public func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState)
+    open func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState)
     {
         switch state
         {
-        case .NotConnected:
+        case .notConnected:
 
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            DispatchQueue.main.async { () -> Void in
                 self.delegate?.didDisconnectPeer?(peerID)
-                NSNotificationCenter.defaultCenter().postNotificationName(BonjourDidDisconnectPeerNotification, object: nil, userInfo: [BonjourNotificationPeerKey : peerID])
+                NotificationCenter.default.post(name: Notification.Name(rawValue: BonjourDidDisconnectPeerNotification), object: nil, userInfo: [BonjourNotificationPeerKey : peerID])
             }
-        case .Connecting:
+        case .connecting:
             break
-        case .Connected:
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+        case .connected:
+            DispatchQueue.main.async { () -> Void in
                 self.delegate?.didConnectPeer?(peerID)
-                NSNotificationCenter.defaultCenter().postNotificationName(BonjourDidConnectPeerNotification, object: nil, userInfo: [BonjourNotificationPeerKey : peerID])
+                NotificationCenter.default.post(name: Notification.Name(rawValue: BonjourDidConnectPeerNotification), object: nil, userInfo: [BonjourNotificationPeerKey : peerID])
             }
 
         }
     }
-    public func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID)
+    open func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID)
     {
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+        DispatchQueue.main.async { () -> Void in
            
-            if let message = String(data: data, encoding: NSUTF8StringEncoding)
+            if let message = String(data: data, encoding: String.Encoding.utf8)
             {
                 self.delegate?.didReceiveMessage?(message, peerID: peerID)
-                NSNotificationCenter.defaultCenter().postNotificationName(BonjourDidConnectPeerNotification, object: nil, userInfo: [BonjourNotificationPeerKey : peerID,BonjourNotificationMessageKey:message])
+                NotificationCenter.default.post(name: Notification.Name(rawValue: BonjourDidConnectPeerNotification), object: nil, userInfo: [BonjourNotificationPeerKey : peerID,BonjourNotificationMessageKey:message])
             }
         }
 
     }
-    public func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID)
+    open func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID)
     {
     }
-    public func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress)
+    open func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress)
     {
     }
-    public func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?)
+    open func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL, withError error: Error?)
     {
     }
 

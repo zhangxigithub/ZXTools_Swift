@@ -15,9 +15,9 @@ public extension UIView
         var result = [NSLayoutConstraint]()
         for c in self.constraints
         {
-            if c.firstAttribute == .Width &&
+            if c.firstAttribute == .width &&
                 (c.firstItem as? NSObject) == self &&
-                c.secondAttribute == .NotAnAttribute &&
+                c.secondAttribute == .notAnAttribute &&
                 (c.secondItem as? NSObject) == nil
             {
                 result.append(c)
@@ -31,9 +31,9 @@ public extension UIView
         var result = [NSLayoutConstraint]()
         for c in self.constraints
         {
-            if c.firstAttribute == .Height &&
+            if c.firstAttribute == .height &&
                 (c.firstItem as? NSObject) == self &&
-                c.secondAttribute == .NotAnAttribute &&
+                c.secondAttribute == .notAnAttribute &&
                 (c.secondItem as? NSObject) == nil
             {
                 result.append(c)
@@ -44,23 +44,23 @@ public extension UIView
     
     public func fitWidth()
     {
-        let size = self.sizeThatFits(CGSizeZero)
+        let size = self.sizeThatFits(CGSize.zero)
         changeWidth(size.width)
     }
     
     public func fitHeight()
     {
-        let size = self.sizeThatFits(CGSizeZero)
+        let size = self.sizeThatFits(CGSize.zero)
         changeHeight(size.height)
     }
-    public func changeWidth(width:CGFloat)
+    public func changeWidth(_ width:CGFloat)
     {
         self.widthConstraints().forEach {
             $0.constant = width
         }
     }
     
-    public func changeHeight(height:CGFloat)
+    public func changeHeight(_ height:CGFloat)
     {
         self.heightConstraints().forEach {
             $0.constant = height
@@ -68,7 +68,7 @@ public extension UIView
     }
     
     
-    public func constraint(identifier:String) -> NSLayoutConstraint?
+    public func constraint(_ identifier:String) -> NSLayoutConstraint?
     {
         for c in self.constraints
         {
@@ -81,7 +81,7 @@ public extension UIView
         return nil
     }
     
-    public func constraintInSubviews(identifier:String) -> NSLayoutConstraint?
+    public func constraintInSubviews(_ identifier:String) -> NSLayoutConstraint?
     {
         var c = self.constraint(identifier)
         

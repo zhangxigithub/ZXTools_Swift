@@ -8,26 +8,26 @@
 
 import UIKit
 
-public class ZXOnce {
+open class ZXOnce {
 
-    public class func run(key:String,once:(()->Void)?,another:(()->Void)?)
+    open class func run(_ key:String,once:(()->Void)?,another:(()->Void)?)
     {
         let realKey = key+".zhangxi.once"
-        if let _  = NSUserDefaults.standardUserDefaults().objectForKey(realKey)
+        if let _  = UserDefaults.standard.object(forKey: realKey)
         {
             another?()
         }else
         {
             once?()
-            NSUserDefaults.standardUserDefaults().setObject("finished", forKey: realKey)
-            NSUserDefaults.standardUserDefaults().synchronize()
+            UserDefaults.standard.set("finished", forKey: realKey)
+            UserDefaults.standard.synchronize()
         }
     }
-    public class func clean(key:String)
+    open class func clean(_ key:String)
     {
         let realKey = key+".zhangxi.once"
-        NSUserDefaults.standardUserDefaults().removeObjectForKey(realKey)
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.removeObject(forKey: realKey)
+        UserDefaults.standard.synchronize()
     }
 }
 

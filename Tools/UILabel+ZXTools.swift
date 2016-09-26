@@ -11,13 +11,13 @@ import UIKit
 public extension UILabel
 {
     
-    public func setMultipleColorText(texts:Array<(color:UIColor,text:String)>)
+    public func setMultipleColorText(_ texts:Array<(color:UIColor,text:String)>)
     {
         
         var string = ""
         for text in texts
         {
-            string =  string.stringByAppendingString(text.text)
+            string =  string + (text.text)
         }
         let aString = NSMutableAttributedString(string: string)
         
