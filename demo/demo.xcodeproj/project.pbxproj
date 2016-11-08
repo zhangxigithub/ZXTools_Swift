@@ -34,7 +34,53 @@
 		33E9819C1D1B70BF0045A110 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9819B1D1B70BE0045A110 /* CoreLocation.framework */; };
 		33E9819E1D1B71010045A110 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9819D1D1B71010045A110 /* MultipeerConnectivity.framework */; };
 		33E981A01D1B7C790045A110 /* NSURL+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9819F1D1B7C790045A110 /* NSURL+ZXTools.swift */; };
+		33F5800D1DD1A5C400606D85 /* ZXTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 33F5800B1DD1A5C400606D85 /* ZXTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33F580101DD1A5C400606D85 /* ZXTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F580091DD1A5C300606D85 /* ZXTools.framework */; };
+		33F580111DD1A5C400606D85 /* ZXTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33F580091DD1A5C300606D85 /* ZXTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33F580161DD1A5CB00606D85 /* ZXLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981991D1B70A30045A110 /* ZXLocationManager.swift */; };
+		33F580171DD1A5CB00606D85 /* ZXTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33460B8F1D1ACE1700B24F0B /* ZXTimer.swift */; };
+		33F580181DD1A5CB00606D85 /* Bonjour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33460B8D1D1ACD1300B24F0B /* Bonjour.swift */; };
+		33F580191DD1A5CB00606D85 /* NSDate+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9813F1D1A18140045A110 /* NSDate+Today.swift */; };
+		33F5801A1DD1A5CB00606D85 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981401D1A18140045A110 /* NSDictionary+JSON.swift */; };
+		33F5801B1DD1A5CB00606D85 /* NSUserDefaults+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981411D1A18140045A110 /* NSUserDefaults+ZXTools.swift */; };
+		33F5801C1DD1A5CB00606D85 /* String+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981421D1A18140045A110 /* String+ZXTools.swift */; };
+		33F5801D1DD1A5CB00606D85 /* UIColor+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981431D1A18140045A110 /* UIColor+ZXTools.swift */; };
+		33F5801E1DD1A5CB00606D85 /* UIImageView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981441D1A18140045A110 /* UIImageView+Animation.swift */; };
+		33F5801F1DD1A5CB00606D85 /* UILabel+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981451D1A18140045A110 /* UILabel+ZXTools.swift */; };
+		33F580201DD1A5CB00606D85 /* UIView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981461D1A18140045A110 /* UIView+Circle.swift */; };
+		33F580211DD1A5CB00606D85 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981471D1A18140045A110 /* UIView+Constraint.swift */; };
+		33F580221DD1A5CB00606D85 /* UIView+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981481D1A18140045A110 /* UIView+Render.swift */; };
+		33F580231DD1A5CB00606D85 /* UIView+ZXQuartz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981491D1A18140045A110 /* UIView+ZXQuartz.swift */; };
+		33F580241DD1A5CB00606D85 /* UIWebView+JS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814A1D1A18140045A110 /* UIWebView+JS.swift */; };
+		33F580251DD1A5CB00606D85 /* NSURL+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9819F1D1B7C790045A110 /* NSURL+ZXTools.swift */; };
+		33F580261DD1A5CB00606D85 /* ZXMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814B1D1A18140045A110 /* ZXMacro.swift */; };
+		33F580271DD1A5CB00606D85 /* ZXOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814C1D1A18140045A110 /* ZXOnce.swift */; };
+		33F580281DD1A5CB00606D85 /* ZXQuartzView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814D1D1A18140045A110 /* ZXQuartzView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33F5800E1DD1A5C400606D85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 339080641C0BF810008C36F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33F580081DD1A5C300606D85;
+			remoteInfo = ZXTools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		33F580151DD1A5C400606D85 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				33F580111DD1A5C400606D85 /* ZXTools.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		33460B8D1D1ACD1300B24F0B /* Bonjour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bonjour.swift; sourceTree = "<group>"; };
@@ -67,6 +113,9 @@
 		33E9819B1D1B70BE0045A110 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		33E9819D1D1B71010045A110 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		33E9819F1D1B7C790045A110 /* NSURL+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+ZXTools.swift"; sourceTree = "<group>"; };
+		33F580091DD1A5C300606D85 /* ZXTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZXTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F5800B1DD1A5C400606D85 /* ZXTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXTools.h; sourceTree = "<group>"; };
+		33F5800C1DD1A5C400606D85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +125,14 @@
 			files = (
 				33E9819E1D1B71010045A110 /* MultipeerConnectivity.framework in Frameworks */,
 				33E9819C1D1B70BF0045A110 /* CoreLocation.framework in Frameworks */,
+				33F580101DD1A5C400606D85 /* ZXTools.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F580051DD1A5C300606D85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +145,7 @@
 				33E9819D1D1B71010045A110 /* MultipeerConnectivity.framework */,
 				33E9819B1D1B70BE0045A110 /* CoreLocation.framework */,
 				3390806E1C0BF810008C36F3 /* demo */,
+				33F5800A1DD1A5C300606D85 /* ZXTools */,
 				3390806D1C0BF810008C36F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				3390806C1C0BF810008C36F3 /* demo.app */,
+				33F580091DD1A5C300606D85 /* ZXTools.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,7 +202,27 @@
 			path = ../../Tools;
 			sourceTree = "<group>";
 		};
+		33F5800A1DD1A5C300606D85 /* ZXTools */ = {
+			isa = PBXGroup;
+			children = (
+				33F5800B1DD1A5C400606D85 /* ZXTools.h */,
+				33F5800C1DD1A5C400606D85 /* Info.plist */,
+			);
+			path = ZXTools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		33F580061DD1A5C300606D85 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F5800D1DD1A5C400606D85 /* ZXTools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3390806B1C0BF810008C36F3 /* demo */ = {
@@ -153,15 +232,35 @@
 				339080681C0BF810008C36F3 /* Sources */,
 				339080691C0BF810008C36F3 /* Frameworks */,
 				3390806A1C0BF810008C36F3 /* Resources */,
+				33F580151DD1A5C400606D85 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				33F5800F1DD1A5C400606D85 /* PBXTargetDependency */,
 			);
 			name = demo;
 			productName = demo;
 			productReference = 3390806C1C0BF810008C36F3 /* demo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		33F580081DD1A5C300606D85 /* ZXTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F580121DD1A5C400606D85 /* Build configuration list for PBXNativeTarget "ZXTools" */;
+			buildPhases = (
+				33F580041DD1A5C300606D85 /* Sources */,
+				33F580051DD1A5C300606D85 /* Frameworks */,
+				33F580061DD1A5C300606D85 /* Headers */,
+				33F580071DD1A5C300606D85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZXTools;
+			productName = ZXTools;
+			productReference = 33F580091DD1A5C300606D85 /* ZXTools.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -177,6 +276,10 @@
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 54TGPDSGF2;
 						LastSwiftMigration = 0800;
+					};
+					33F580081DD1A5C300606D85 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -194,6 +297,7 @@
 			projectRoot = "";
 			targets = (
 				3390806B1C0BF810008C36F3 /* demo */,
+				33F580081DD1A5C300606D85 /* ZXTools */,
 			);
 		};
 /* End PBXProject section */
@@ -206,6 +310,13 @@
 				3390807A1C0BF810008C36F3 /* LaunchScreen.storyboard in Resources */,
 				339080771C0BF810008C36F3 /* Assets.xcassets in Resources */,
 				339080751C0BF810008C36F3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F580071DD1A5C300606D85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +352,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33F580041DD1A5C300606D85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F580251DD1A5CB00606D85 /* NSURL+ZXTools.swift in Sources */,
+				33F5801C1DD1A5CB00606D85 /* String+ZXTools.swift in Sources */,
+				33F580231DD1A5CB00606D85 /* UIView+ZXQuartz.swift in Sources */,
+				33F580221DD1A5CB00606D85 /* UIView+Render.swift in Sources */,
+				33F580271DD1A5CB00606D85 /* ZXOnce.swift in Sources */,
+				33F580261DD1A5CB00606D85 /* ZXMacro.swift in Sources */,
+				33F580191DD1A5CB00606D85 /* NSDate+Today.swift in Sources */,
+				33F580201DD1A5CB00606D85 /* UIView+Circle.swift in Sources */,
+				33F580211DD1A5CB00606D85 /* UIView+Constraint.swift in Sources */,
+				33F580281DD1A5CB00606D85 /* ZXQuartzView.swift in Sources */,
+				33F5801B1DD1A5CB00606D85 /* NSUserDefaults+ZXTools.swift in Sources */,
+				33F580241DD1A5CB00606D85 /* UIWebView+JS.swift in Sources */,
+				33F5801D1DD1A5CB00606D85 /* UIColor+ZXTools.swift in Sources */,
+				33F580161DD1A5CB00606D85 /* ZXLocationManager.swift in Sources */,
+				33F580171DD1A5CB00606D85 /* ZXTimer.swift in Sources */,
+				33F580181DD1A5CB00606D85 /* Bonjour.swift in Sources */,
+				33F5801E1DD1A5CB00606D85 /* UIImageView+Animation.swift in Sources */,
+				33F5801F1DD1A5CB00606D85 /* UILabel+ZXTools.swift in Sources */,
+				33F5801A1DD1A5CB00606D85 /* NSDictionary+JSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33F5800F1DD1A5C400606D85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33F580081DD1A5C300606D85 /* ZXTools */;
+			targetProxy = 33F5800E1DD1A5C400606D85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		339080731C0BF810008C36F3 /* Main.storyboard */ = {
@@ -347,6 +492,7 @@
 		3390807F1C0BF810008C36F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -356,13 +502,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zhangxi.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
 		339080801C0BF810008C36F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -372,7 +519,65 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zhangxi.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0.1;
+			};
+			name = Release;
+		};
+		33F580131DD1A5C400606D85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ZXTools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhangxi.ZXTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		33F580141DD1A5C400606D85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ZXTools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhangxi.ZXTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -396,6 +601,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		33F580121DD1A5C400606D85 /* Build configuration list for PBXNativeTarget "ZXTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F580131DD1A5C400606D85 /* Debug */,
+				33F580141DD1A5C400606D85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

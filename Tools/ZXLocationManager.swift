@@ -30,7 +30,16 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
     {
         self.findCityHandler = handler
         
-        self.locationManager.requestWhenInUseAuthorization()
+        switch CLLocationManager.authorizationStatus() {
+        
+        case .notDetermined,.restricted:
+            self.locationManager.requestWhenInUseAuthorization()
+        case .denied:
+            self.findCityHandler?(nil)
+        case .authorizedAlways,.authorizedWhenInUse:
+            self.locationManager.startUpdatingLocation()
+        }
+        
         locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
     }
     
