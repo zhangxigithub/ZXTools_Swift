@@ -34,6 +34,26 @@
 		33E9819C1D1B70BF0045A110 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9819B1D1B70BE0045A110 /* CoreLocation.framework */; };
 		33E9819E1D1B71010045A110 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9819D1D1B71010045A110 /* MultipeerConnectivity.framework */; };
 		33E981A01D1B7C790045A110 /* NSURL+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9819F1D1B7C790045A110 /* NSURL+ZXTools.swift */; };
+		33F57FEB1DD1657500606D85 /* ZXTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 33F57FE91DD1657500606D85 /* ZXTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33F57FEF1DD1659400606D85 /* ZXLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981991D1B70A30045A110 /* ZXLocationManager.swift */; };
+		33F57FF01DD1659400606D85 /* ZXTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33460B8F1D1ACE1700B24F0B /* ZXTimer.swift */; };
+		33F57FF11DD1659400606D85 /* Bonjour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33460B8D1D1ACD1300B24F0B /* Bonjour.swift */; };
+		33F57FF21DD1659400606D85 /* NSDate+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9813F1D1A18140045A110 /* NSDate+Today.swift */; };
+		33F57FF31DD1659400606D85 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981401D1A18140045A110 /* NSDictionary+JSON.swift */; };
+		33F57FF41DD1659400606D85 /* NSUserDefaults+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981411D1A18140045A110 /* NSUserDefaults+ZXTools.swift */; };
+		33F57FF51DD1659400606D85 /* String+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981421D1A18140045A110 /* String+ZXTools.swift */; };
+		33F57FF61DD1659400606D85 /* UIColor+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981431D1A18140045A110 /* UIColor+ZXTools.swift */; };
+		33F57FF71DD1659400606D85 /* UIImageView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981441D1A18140045A110 /* UIImageView+Animation.swift */; };
+		33F57FF81DD1659400606D85 /* UILabel+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981451D1A18140045A110 /* UILabel+ZXTools.swift */; };
+		33F57FF91DD1659400606D85 /* UIView+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981461D1A18140045A110 /* UIView+Circle.swift */; };
+		33F57FFA1DD1659400606D85 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981471D1A18140045A110 /* UIView+Constraint.swift */; };
+		33F57FFB1DD1659400606D85 /* UIView+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981481D1A18140045A110 /* UIView+Render.swift */; };
+		33F57FFC1DD1659400606D85 /* UIView+ZXQuartz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E981491D1A18140045A110 /* UIView+ZXQuartz.swift */; };
+		33F57FFD1DD1659400606D85 /* UIWebView+JS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814A1D1A18140045A110 /* UIWebView+JS.swift */; };
+		33F57FFE1DD1659400606D85 /* NSURL+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9819F1D1B7C790045A110 /* NSURL+ZXTools.swift */; };
+		33F57FFF1DD1659400606D85 /* ZXMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814B1D1A18140045A110 /* ZXMacro.swift */; };
+		33F580001DD1659400606D85 /* ZXOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814C1D1A18140045A110 /* ZXOnce.swift */; };
+		33F580011DD1659400606D85 /* ZXQuartzView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814D1D1A18140045A110 /* ZXQuartzView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +87,9 @@
 		33E9819B1D1B70BE0045A110 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		33E9819D1D1B71010045A110 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		33E9819F1D1B7C790045A110 /* NSURL+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+ZXTools.swift"; sourceTree = "<group>"; };
+		33F57FE71DD1657400606D85 /* ZXTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZXTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F57FE91DD1657500606D85 /* ZXTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXTools.h; sourceTree = "<group>"; };
+		33F57FEA1DD1657500606D85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +102,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33F57FE31DD1657400606D85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,6 +118,7 @@
 				33E9819D1D1B71010045A110 /* MultipeerConnectivity.framework */,
 				33E9819B1D1B70BE0045A110 /* CoreLocation.framework */,
 				3390806E1C0BF810008C36F3 /* demo */,
+				33F57FE81DD1657500606D85 /* ZXTools */,
 				3390806D1C0BF810008C36F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				3390806C1C0BF810008C36F3 /* demo.app */,
+				33F57FE71DD1657400606D85 /* ZXTools.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,7 +175,27 @@
 			path = ../../Tools;
 			sourceTree = "<group>";
 		};
+		33F57FE81DD1657500606D85 /* ZXTools */ = {
+			isa = PBXGroup;
+			children = (
+				33F57FE91DD1657500606D85 /* ZXTools.h */,
+				33F57FEA1DD1657500606D85 /* Info.plist */,
+			);
+			path = ZXTools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		33F57FE41DD1657400606D85 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F57FEB1DD1657500606D85 /* ZXTools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3390806B1C0BF810008C36F3 /* demo */ = {
@@ -163,6 +215,24 @@
 			productReference = 3390806C1C0BF810008C36F3 /* demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		33F57FE61DD1657400606D85 /* ZXTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F57FEE1DD1657500606D85 /* Build configuration list for PBXNativeTarget "ZXTools" */;
+			buildPhases = (
+				33F57FE21DD1657400606D85 /* Sources */,
+				33F57FE31DD1657400606D85 /* Frameworks */,
+				33F57FE41DD1657400606D85 /* Headers */,
+				33F57FE51DD1657400606D85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZXTools;
+			productName = ZXTools;
+			productReference = 33F57FE71DD1657400606D85 /* ZXTools.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,6 +247,11 @@
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 54TGPDSGF2;
 						LastSwiftMigration = 0800;
+					};
+					33F57FE61DD1657400606D85 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 54TGPDSGF2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -194,6 +269,7 @@
 			projectRoot = "";
 			targets = (
 				3390806B1C0BF810008C36F3 /* demo */,
+				33F57FE61DD1657400606D85 /* ZXTools */,
 			);
 		};
 /* End PBXProject section */
@@ -206,6 +282,13 @@
 				3390807A1C0BF810008C36F3 /* LaunchScreen.storyboard in Resources */,
 				339080771C0BF810008C36F3 /* Assets.xcassets in Resources */,
 				339080751C0BF810008C36F3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F57FE51DD1657400606D85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +321,32 @@
 				33E9815A1D1A18140045A110 /* ZXMacro.swift in Sources */,
 				33E9815B1D1A18140045A110 /* ZXOnce.swift in Sources */,
 				33E981561D1A18140045A110 /* UIView+Constraint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F57FE21DD1657400606D85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F57FFE1DD1659400606D85 /* NSURL+ZXTools.swift in Sources */,
+				33F57FF51DD1659400606D85 /* String+ZXTools.swift in Sources */,
+				33F57FFC1DD1659400606D85 /* UIView+ZXQuartz.swift in Sources */,
+				33F57FFB1DD1659400606D85 /* UIView+Render.swift in Sources */,
+				33F580001DD1659400606D85 /* ZXOnce.swift in Sources */,
+				33F57FFF1DD1659400606D85 /* ZXMacro.swift in Sources */,
+				33F57FF21DD1659400606D85 /* NSDate+Today.swift in Sources */,
+				33F57FF91DD1659400606D85 /* UIView+Circle.swift in Sources */,
+				33F57FFA1DD1659400606D85 /* UIView+Constraint.swift in Sources */,
+				33F580011DD1659400606D85 /* ZXQuartzView.swift in Sources */,
+				33F57FF41DD1659400606D85 /* NSUserDefaults+ZXTools.swift in Sources */,
+				33F57FFD1DD1659400606D85 /* UIWebView+JS.swift in Sources */,
+				33F57FF61DD1659400606D85 /* UIColor+ZXTools.swift in Sources */,
+				33F57FEF1DD1659400606D85 /* ZXLocationManager.swift in Sources */,
+				33F57FF01DD1659400606D85 /* ZXTimer.swift in Sources */,
+				33F57FF11DD1659400606D85 /* Bonjour.swift in Sources */,
+				33F57FF71DD1659400606D85 /* UIImageView+Animation.swift in Sources */,
+				33F57FF81DD1659400606D85 /* UILabel+ZXTools.swift in Sources */,
+				33F57FF31DD1659400606D85 /* NSDictionary+JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +485,64 @@
 			};
 			name = Release;
 		};
+		33F57FEC1DD1657500606D85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 54TGPDSGF2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ZXTools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhangxi.ZXTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		33F57FED1DD1657500606D85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 54TGPDSGF2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ZXTools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhangxi.ZXTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -396,6 +563,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		33F57FEE1DD1657500606D85 /* Build configuration list for PBXNativeTarget "ZXTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F57FEC1DD1657500606D85 /* Debug */,
+				33F57FED1DD1657500606D85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
