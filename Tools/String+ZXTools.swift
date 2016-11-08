@@ -18,6 +18,27 @@ public extension String
     
     public func encodeURL() -> NSURL
     {
-        return NSURL(string: self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)!;
+        if let originURL = NSURL(string: self)
+        {
+            return originURL
+        }else
+        {
+            if let url = NSURL(string: self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
+            {
+                // 把URL最后一个#解码，还不确定会不会有问题 张玺
+                if  let range = url.absoluteString?.rangeOfString("%23", options: NSStringCompareOptions.BackwardsSearch)
+                {
+                    let newURL = url.absoluteString?.stringByReplacingCharactersInRange(range, withString: "#")
+                    return NSURL(string: newURL!)!
+                }else
+                {
+                    return url
+                }
+                
+            }else
+            {
+                return NSURL(string: "")!
+            }
+        }
     }
 }
