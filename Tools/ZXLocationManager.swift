@@ -70,7 +70,6 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
                 
                 if let mark = marks?.first
                 {
-                    print(mark.locality)
                     self.findCityHandler?(mark.locality)
                 }
             })
