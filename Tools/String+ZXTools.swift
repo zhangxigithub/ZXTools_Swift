@@ -26,7 +26,7 @@ public extension String
                 return url
             }else
             {
-                return URL(string: "")!
+                return URL(string: "about:blank")!
             }
         }
     }
