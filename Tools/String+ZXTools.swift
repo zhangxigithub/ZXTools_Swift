@@ -14,7 +14,7 @@ public extension String
         return self.substring(to: self.index(before: self.endIndex))
     }
     
-    public func encodeURL() -> URL
+    public func encodeURL() -> URL?
     {
         if let originURL = URL(string: self)
         {
@@ -26,7 +26,7 @@ public extension String
                 return url
             }else
             {
-                return URL(string: "about:blank")!
+                return nil
             }
         }
     }
