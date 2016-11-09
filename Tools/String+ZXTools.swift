@@ -9,34 +9,24 @@ import Foundation
 
 public extension String
 {
-    public func stringRemovedLastChar()->String
+    public func removingLastChar()->String
     {
-        let last1 = self.endIndex.advancedBy(-1)
-        return self.substringToIndex(last1)
+        return self.substring(to: self.index(before: self.endIndex))
     }
     
-    public func encodeURL() -> NSURL
+    public func encodeURL() -> URL
     {
-        if let originURL = NSURL(string: self)
+        if let originURL = URL(string: self)
         {
             return originURL
         }else
         {
-            if let url = NSURL(string: self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
+            if let url = URL(string: self.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!)
             {
-                // 把URL最后一个#解码，还不确定会不会有问题 张玺
-                if  let range = url.absoluteString?.rangeOfString("%23", options: NSStringCompareOptions.BackwardsSearch)
-                {
-                    let newURL = url.absoluteString?.stringByReplacingCharactersInRange(range, withString: "#")
-                    return NSURL(string: newURL!)!
-                }else
-                {
-                    return url
-                }
-                
+                return url
             }else
             {
-                return NSURL(string: "")!
+                return URL(string: "")!
             }
         }
     }
