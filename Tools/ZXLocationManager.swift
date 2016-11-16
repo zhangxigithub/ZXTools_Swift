@@ -9,48 +9,58 @@
 import Foundation
 import CoreLocation
 
-public typealias LocationHandler = (CLLocationManager,CLLocation?) -> Void
-public typealias FindCityHandler = (String?) -> Void
+public typealias LocateHandler  = ([CLLocation]) -> Void
+public typealias ReverseHandler = ([CLPlacemark]?) -> Void
+
+public typealias EasyLocateHandler  = (CLLocation) -> Void
+public typealias EasyReverseHandler = (CLPlacemark) -> Void
 
 open class ZXLocationManager : NSObject,CLLocationManagerDelegate
 {
-    open static let sharedManager = ZXLocationManager()
+    open static let shared = ZXLocationManager()
     
     let locationManager = CLLocationManager()
-    let geocoder     = CLGeocoder()
-    var handler:LocationHandler?
-    var findCityHandler:FindCityHandler?
+    let geocoder        = CLGeocoder()
+    
+    
+    var placemark: CLPlacemark?
+    var location : CLLocation?
+    
+    
+    var locateHandler   : LocateHandler?
+    var reverseHandler  : ReverseHandler?
+    
+    var easyLocateHandler   : EasyLocateHandler?
+    var easyReverseHandler  : EasyReverseHandler?
+    
+    
     
     override init() {
         super.init()
         locationManager.delegate = self
     }
 
-    open func findCity(_ handler:@escaping (String?) -> Void)
+
+    open func locate(accuracy desiredAccuracy:CLLocationAccuracy = kCLLocationAccuracyBest, locate:LocateHandler? = nil,reverse:ReverseHandler? = nil)
     {
-        self.findCityHandler = handler
-        
-        switch CLLocationManager.authorizationStatus() {
-        
-        case .notDetermined,.restricted:
-            self.locationManager.requestWhenInUseAuthorization()
-        case .denied:
-            self.findCityHandler?(nil)
-        case .authorizedAlways,.authorizedWhenInUse:
-            self.locationManager.startUpdatingLocation()
-        }
-        
-        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
-    }
-    
-    
-    open func locate(_ desiredAccuracy:CLLocationAccuracy = kCLLocationAccuracyBest, handler:LocationHandler? = nil)
-    {
-        self.locationManager.requestWhenInUseAuthorization()
-        self.handler = handler
+        self.locateHandler  = locate
+        self.reverseHandler = reverse
         
         locationManager.desiredAccuracy = desiredAccuracy
+        
+        locationManager.requestWhenInUseAuthorization()
     }
+    
+    open func easyLocate(locate:EasyLocateHandler? = nil,reverse:EasyReverseHandler? = nil)
+    {
+        self.easyLocateHandler  = locate
+        self.easyReverseHandler = reverse
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+
     open func reverseGeocodeLocation(_ location:CLLocation,handler:@escaping CLGeocodeCompletionHandler)
     {
         geocoder.cancelGeocode()
@@ -59,22 +69,31 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
     
     
     open func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.handler?(manager,locations.first)
         
-
-        if findCityHandler != nil && locations.first != nil
+        self.locateHandler?(locations)
+        
+        //find location
+        if let first = locations.first
         {
-            manager.stopUpdatingLocation()
+            self.location = first
+            self.easyLocateHandler?(first)
+            self.locationManager.stopUpdatingLocation()
             
-            self.reverseGeocodeLocation(locations.first!, handler: { (marks, error) in
-                
-                if let mark = marks?.first
-                {
-                    self.findCityHandler?(mark.locality)
-                }
-            })
+            if reverseHandler != nil
+            {
+                manager.stopUpdatingLocation()
+                self.reverseGeocodeLocation(locations.first!, handler: { (marks, error) in
+                    
+                    if let place = marks?.first
+                    {
+                        self.placemark = place
+                        self.easyReverseHandler?(place)
+                    }
+                    
+                    self.reverseHandler?(marks)
+                })
+            }
         }
-        
     }
     
     open func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -85,7 +104,7 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
         case .restricted:
             break;
         case .denied:
-            self.findCityHandler?(nil)
+            self.reverseHandler?(nil)
         case .authorizedAlways:
             break;
         case .authorizedWhenInUse:
@@ -94,6 +113,8 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
         }
     }
     
-
+    open func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        
+    }
     
 }

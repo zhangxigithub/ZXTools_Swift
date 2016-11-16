@@ -9,6 +9,22 @@ import Foundation
 
 public extension String
 {
+    
+    public func firstChar()->String
+    {
+        return self.substring(to: self.index(after: self.startIndex))
+    }
+    
+    public func lastChar()->String
+    {
+        return self.substring(from: self.index(before: self.endIndex))
+    }
+    
+    public func removingFirstChar()->String
+    {
+        return self.substring(from: self.index(after: self.startIndex))
+    }
+    
     public func removingLastChar()->String
     {
         return self.substring(to: self.index(before: self.endIndex))

@@ -58,6 +58,8 @@
 		33F580261DD1A5CB00606D85 /* ZXMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814B1D1A18140045A110 /* ZXMacro.swift */; };
 		33F580271DD1A5CB00606D85 /* ZXOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814C1D1A18140045A110 /* ZXOnce.swift */; };
 		33F580281DD1A5CB00606D85 /* ZXQuartzView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E9814D1D1A18140045A110 /* ZXQuartzView.swift */; };
+		9029252C1DDCAB07005CDDF6 /* Int+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029252B1DDCAB07005CDDF6 /* Int+ZXTools.swift */; };
+		9029252D1DDCAB07005CDDF6 /* Int+ZXTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029252B1DDCAB07005CDDF6 /* Int+ZXTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,7 @@
 		33F580091DD1A5C300606D85 /* ZXTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZXTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F5800B1DD1A5C400606D85 /* ZXTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXTools.h; sourceTree = "<group>"; };
 		33F5800C1DD1A5C400606D85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9029252B1DDCAB07005CDDF6 /* Int+ZXTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ZXTools.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,7 @@
 				33E9819F1D1B7C790045A110 /* NSURL+ZXTools.swift */,
 				33E9814B1D1A18140045A110 /* ZXMacro.swift */,
 				33E9814C1D1A18140045A110 /* ZXOnce.swift */,
+				9029252B1DDCAB07005CDDF6 /* Int+ZXTools.swift */,
 				33E9814D1D1A18140045A110 /* ZXQuartzView.swift */,
 			);
 			name = Tools;
@@ -343,6 +347,7 @@
 				33460B901D1ACE1700B24F0B /* ZXTimer.swift in Sources */,
 				33E981521D1A18140045A110 /* UIColor+ZXTools.swift in Sources */,
 				33E981511D1A18140045A110 /* String+ZXTools.swift in Sources */,
+				9029252C1DDCAB07005CDDF6 /* Int+ZXTools.swift in Sources */,
 				33E9814F1D1A18140045A110 /* NSDictionary+JSON.swift in Sources */,
 				33E981591D1A18140045A110 /* UIWebView+JS.swift in Sources */,
 				33E981531D1A18140045A110 /* UIImageView+Animation.swift in Sources */,
@@ -369,6 +374,7 @@
 				33F580191DD1A5CB00606D85 /* NSDate+Today.swift in Sources */,
 				33F580201DD1A5CB00606D85 /* UIView+Circle.swift in Sources */,
 				33F580211DD1A5CB00606D85 /* UIView+Constraint.swift in Sources */,
+				9029252D1DDCAB07005CDDF6 /* Int+ZXTools.swift in Sources */,
 				33F580281DD1A5CB00606D85 /* ZXQuartzView.swift in Sources */,
 				33F5801B1DD1A5CB00606D85 /* NSUserDefaults+ZXTools.swift in Sources */,
 				33F580241DD1A5CB00606D85 /* UIWebView+JS.swift in Sources */,
@@ -506,7 +512,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhangxi.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -523,7 +529,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhangxi.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
