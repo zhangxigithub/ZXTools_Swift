@@ -12,7 +12,7 @@ import UIKit
 
 
 
-public class CCContactItem
+open class CCContactItem
 {
     var name:String?
     var phone:String?
@@ -27,14 +27,14 @@ public class CCContactItem
 }
 
 @available(iOS 9.0, *)
-public class ZXContacts
+open class ZXContacts
 {
     static let sharedContacts = ZXContacts()
     
     var contactStore = CNContactStore()
     
     
-    public func access(_ completionHandler:@escaping (Bool, Error?) -> Void)
+    open func access(_ completionHandler:@escaping (Bool, Error?) -> Void)
     {
         let authorizationStatus = CNContactStore.authorizationStatus(for: CNEntityType.contacts)
         
@@ -52,7 +52,7 @@ public class ZXContacts
     }
 
     
-    public func query(_ queryString:String) -> Array<CCContactItem>?
+    open func query(_ queryString:String) -> Array<CCContactItem>?
     {
         /*
          http://stackoverflow.com/questions/33581966/phone-number-predicate-on-cncontactstore
