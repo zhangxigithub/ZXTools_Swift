@@ -29,7 +29,7 @@ open class CCContactItem
 @available(iOS 9.0, *)
 open class ZXContacts
 {
-    static let sharedContacts = ZXContacts()
+    open static let sharedContacts = ZXContacts()
     
     var contactStore = CNContactStore()
     
