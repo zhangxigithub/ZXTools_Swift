@@ -14,10 +14,10 @@ import UIKit
 
 open class CCContactItem
 {
-    var name:String?
-    var phone:String?
+    open var name:String?
+    open var phone:String?
        
-    func tel()
+    open func tel()
     {
         if self.phone != nil
         {
