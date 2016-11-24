@@ -79,7 +79,7 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
             self.easyLocateHandler?(first)
             self.locationManager.stopUpdatingLocation()
             
-            if reverseHandler != nil
+            if reverseHandler != nil || easyReverseHandler != nil
             {
                 manager.stopUpdatingLocation()
                 self.reverseGeocodeLocation(locations.first!, handler: { (marks, error) in

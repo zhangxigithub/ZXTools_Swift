@@ -36,7 +36,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("not first")
         }
         
+        ZXLocationManager.shared.easyLocate(locate: nil, reverse: { (mark) in
+            if let city = mark.locality
+            {
+                print("find \(city)")
+                //self.loadWeatherWithCity(city)
+                //UserDefaults.standard.set(city, forKey:"city")
+            }
+        })
         
+        
+        /*
         ZXLocationManager.shared.easyLocate(locate: { (location) in
             
             print("easy location \(location)")
@@ -56,6 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //print(marks as Any)
         })
         
+        */
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             print("0.1 .... \(ZXLocationManager.shared.location)")
         }
