@@ -23,8 +23,8 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
     let geocoder        = CLGeocoder()
     
     
-    var placemark: CLPlacemark?
-    var location : CLLocation?
+    open var placemark: CLPlacemark?
+    open var location : CLLocation?
     
     
     var locateHandler   : LocateHandler?
