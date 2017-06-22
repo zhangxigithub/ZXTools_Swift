@@ -25,7 +25,8 @@ public extension UILabel
         for text in texts
         {
             let length = (text.text as NSString).length
-            aString.addAttribute(NSForegroundColorAttributeName, value: text.color, range: NSMakeRange(location,length))
+            
+            //aString.addAttribute(NSAttributedStringKey.foregroundColor , value: text.color, range: NSMakeRange(location,length))
             location += length
         }
         self.attributedText = aString

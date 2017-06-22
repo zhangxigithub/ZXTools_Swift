@@ -9,7 +9,17 @@ import Foundation
 
 public extension String
 {
+    func fromBase64() -> String
+    {
+        let data = Data(base64Encoded: self, options: NSData.Base64DecodingOptions(rawValue: 0))
+        return String(data: data!, encoding: String.Encoding.utf8)!
+    }
     
+    func toBase64() -> String
+    {
+        let data = self.data(using: String.Encoding.utf8)
+        return data!.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+    }
     public func firstChar()->String
     {
         return self.substring(to: self.index(after: self.startIndex))
