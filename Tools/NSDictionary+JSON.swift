@@ -20,7 +20,7 @@ public extension NSDictionary
             return nil
         }
         let strJson = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-        return strJson as? String
+        return strJson as String?
     }
     
 }

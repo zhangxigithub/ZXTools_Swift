@@ -49,7 +49,7 @@ public extension UIView
     
     func drawCircle(_ center:CGPoint,radius:Float,fillMode:CGPathDrawingMode=CGPathDrawingMode.fillStroke)
     {
-        drawArc(center, radius: radius, start: 0, end: Float(M_PI*2),fillMode:fillMode)
+        drawArc(center, radius: radius, start: 0, end: Float.pi * 2,fillMode:fillMode)
     }
     func drawArc(_ center:CGPoint,radius:Float,start:Float,end:Float,fillMode:CGPathDrawingMode=CGPathDrawingMode.fillStroke)
     {

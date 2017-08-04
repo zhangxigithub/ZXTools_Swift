@@ -112,7 +112,7 @@ public extension UIView
 
     
     
-    
+    @discardableResult
     func tap(_ target: AnyObject?, action: Selector) -> UITapGestureRecognizer
     {
         let tap = UITapGestureRecognizer(target: target, action: action)

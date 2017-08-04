@@ -16,6 +16,8 @@
 		339080851C0BF87B008C36F3 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339080841C0BF87B008C36F3 /* Menu.swift */; };
 		339C6EC21DE686B600119E63 /* ZXContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339C6EC11DE686B600119E63 /* ZXContacts.swift */; };
 		339C6EC31DE68A8100119E63 /* ZXContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339C6EC11DE686B600119E63 /* ZXContacts.swift */; };
+		33BABD551F208FAA0033C60D /* ZXImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BABD541F208FAA0033C60D /* ZXImageView.swift */; };
+		33BABD561F208FAA0033C60D /* ZXImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BABD541F208FAA0033C60D /* ZXImageView.swift */; };
 		33C36A561DD304DB00CA92AA /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9819D1D1B71010045A110 /* MultipeerConnectivity.framework */; };
 		33C36A571DD304E500CA92AA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9819B1D1B70BE0045A110 /* CoreLocation.framework */; };
 		33C3ADB51D22984B00D25A60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C3ADB41D22984B00D25A60 /* ViewController.swift */; };
@@ -99,6 +101,7 @@
 		3390807B1C0BF810008C36F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		339080841C0BF87B008C36F3 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		339C6EC11DE686B600119E63 /* ZXContacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXContacts.swift; sourceTree = "<group>"; };
+		33BABD541F208FAA0033C60D /* ZXImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXImageView.swift; sourceTree = "<group>"; };
 		33C3ADB41D22984B00D25A60 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33E9813F1D1A18140045A110 /* NSDate+Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Today.swift"; sourceTree = "<group>"; };
 		33E981401D1A18140045A110 /* NSDictionary+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+JSON.swift"; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				339C6EC11DE686B600119E63 /* ZXContacts.swift */,
+				33BABD541F208FAA0033C60D /* ZXImageView.swift */,
 				33E981991D1B70A30045A110 /* ZXLocationManager.swift */,
 				33460B8F1D1ACE1700B24F0B /* ZXTimer.swift */,
 				33460B8D1D1ACD1300B24F0B /* Bonjour.swift */,
@@ -289,6 +293,7 @@
 					};
 					33F580081DD1A5C300606D85 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -354,6 +359,7 @@
 				33E981591D1A18140045A110 /* UIWebView+JS.swift in Sources */,
 				33E981531D1A18140045A110 /* UIImageView+Animation.swift in Sources */,
 				33460B8E1D1ACD1300B24F0B /* Bonjour.swift in Sources */,
+				33BABD551F208FAA0033C60D /* ZXImageView.swift in Sources */,
 				33E9814E1D1A18140045A110 /* NSDate+Today.swift in Sources */,
 				33E981501D1A18140045A110 /* NSUserDefaults+ZXTools.swift in Sources */,
 				33E981541D1A18140045A110 /* UILabel+ZXTools.swift in Sources */,
@@ -368,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33BABD561F208FAA0033C60D /* ZXImageView.swift in Sources */,
 				33F580251DD1A5CB00606D85 /* NSURL+ZXTools.swift in Sources */,
 				33F5801C1DD1A5CB00606D85 /* String+ZXTools.swift in Sources */,
 				33F580231DD1A5CB00606D85 /* UIView+ZXQuartz.swift in Sources */,
@@ -524,7 +531,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -542,7 +549,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
