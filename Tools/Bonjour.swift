@@ -146,16 +146,28 @@ open class Bonjour: NSObject,MCSessionDelegate,MCNearbyServiceAdvertiserDelegate
                 NotificationCenter.default.post(name: Notification.Name(rawValue: BonjourDidConnectPeerNotification), object: nil, userInfo: [BonjourNotificationPeerKey : peerID,BonjourNotificationMessageKey:message])
             }
         }
+    }
+    
 
-    }
-    open func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID)
-    {
-    }
-    open func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress)
-    {
-    }
-    open func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL, withError error: Error?)
-    {
-    }
+    
+    
+    // Received a byte stream from remote peer.
+    
+    public func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID){}
+    
+    
+    // Start receiving a resource from remote peer.
+    
+    public func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress){}
+    
+    
+    // Finished receiving a resource from remote peer and saved the content
+    // in a temporary location - the app is responsible for moving the file
+    // to a permanent location within its sandbox.
+    
+    public func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?){}
+    
+    
+
 
 }
