@@ -20,6 +20,15 @@ class ViewController: UIViewController {
         self.label.fitWidth()
         self.label.fitHeight()
     }
-
-
+    
+    var index = 1
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        ZXLocationManager.shared.easyLocate(locate: { location in
+            print("\(type(of: self))-location: \(self.index)")
+        }, reverse: { mark in
+            print("\(type(of: self))-reverse: \(self.index)")
+            self.index += 1
+        })
+    }
 }

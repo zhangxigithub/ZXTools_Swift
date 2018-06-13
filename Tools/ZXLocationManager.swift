@@ -57,7 +57,17 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
         self.easyReverseHandler = reverse
         
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
-        locationManager.requestWhenInUseAuthorization()
+        
+        let status = CLLocationManager.authorizationStatus()
+        if status == .authorizedAlways || status == .authorizedWhenInUse {
+            if #available(iOS 9, *) {
+                locationManager.requestLocation()
+            } else {
+                locationManager.startUpdatingLocation()
+            }
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
     }
     
 
