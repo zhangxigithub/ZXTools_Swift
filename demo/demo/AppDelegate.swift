@@ -14,9 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
 
         print("abcd".firstChar())
         print("abcd".lastChar())
@@ -36,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("not first")
         }
         
+        ZXLocationManager.shared.reverseLanguageDesignator = "zh-Hans"  // 指定逆地理编码语音为简体中文
         ZXLocationManager.shared.easyLocate(locate: nil, reverse: { (mark) in
             if let city = mark.locality
             {
@@ -82,10 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             print("2.0 .... \(ZXLocationManager.shared.location)")
         }
-
         
         return true
-
     }
 }
-
