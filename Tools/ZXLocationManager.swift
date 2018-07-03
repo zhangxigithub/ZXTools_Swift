@@ -41,6 +41,11 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
         return reverseLanguageDesignator != nil
     }
     
+    var locationAuthorized: Bool {
+        let status = CLLocationManager.authorizationStatus()
+        return status == .authorizedWhenInUse || status == .authorizedAlways
+    }
+    
     override init() {
         super.init()
         locationManager.delegate = self
@@ -63,8 +68,7 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
         
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
         
-        let status = CLLocationManager.authorizationStatus()
-        if status == .authorizedAlways || status == .authorizedWhenInUse {
+        if locationAuthorized {
             if #available(iOS 9, *) {
                 locationManager.requestLocation()
             } else {
