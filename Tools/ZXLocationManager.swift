@@ -33,13 +33,18 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
     var easyLocateHandler   : EasyLocateHandler?
     var easyReverseHandler  : EasyReverseHandler?
     
+    /// 逆地理编码的语音指定器，默认为 nil，即使用系统默认的。
+    var reverseLanguageDesignator: String?
     
+    /// 是否强制指定了逆地理编码的语音指定器。
+    fileprivate var forceReverseLanuage: Bool {
+        return reverseLanguageDesignator != nil
+    }
     
     override init() {
         super.init()
         locationManager.delegate = self
     }
-
 
     open func locate(accuracy desiredAccuracy:CLLocationAccuracy = kCLLocationAccuracyBest, locate:LocateHandler? = nil,reverse:ReverseHandler? = nil)
     {
@@ -70,7 +75,6 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
         }
     }
     
-
     open func reverseGeocodeLocation(_ location:CLLocation,handler:@escaping CLGeocodeCompletionHandler)
     {
         geocoder.cancelGeocode()
@@ -92,12 +96,22 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
             if reverseHandler != nil || easyReverseHandler != nil
             {
                 manager.stopUpdatingLocation()
+                
+                let currentLanguages = UserDefaults.standard.object(forKey: "AppleLanguages")
+                
+                if self.forceReverseLanuage {
+                    UserDefaults.standard.set([self.reverseLanguageDesignator], forKey: "AppleLanguages")
+                }
+                
                 self.reverseGeocodeLocation(locations.first!, handler: { (marks, error) in
-                    
                     if let place = marks?.first
                     {
                         self.placemark = place
                         self.easyReverseHandler?(place)
+                    }
+                    
+                    if self.forceReverseLanuage {
+                        UserDefaults.standard.set(currentLanguages, forKey: "AppleLanguages")
                     }
                     
                     self.reverseHandler?(marks)
@@ -108,7 +122,6 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
     
     open func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
-    
         case .notDetermined:
             break;
         case .restricted:
@@ -126,5 +139,4 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
     open func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         
     }
-    
 }
