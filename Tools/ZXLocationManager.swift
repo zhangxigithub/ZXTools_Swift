@@ -78,7 +78,19 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
     open func reverseGeocodeLocation(_ location:CLLocation,handler:@escaping CLGeocodeCompletionHandler)
     {
         geocoder.cancelGeocode()
-        geocoder.reverseGeocodeLocation(location, completionHandler: handler)
+        
+        let currentLanguages = UserDefaults.standard.object(forKey: "AppleLanguages")
+        if forceReverseLanuage {
+            UserDefaults.standard.set([reverseLanguageDesignator], forKey: "AppleLanguages")
+        }
+        
+        geocoder.reverseGeocodeLocation(location) { marks, error in
+            if self.forceReverseLanuage {
+                UserDefaults.standard.set(currentLanguages, forKey: "AppleLanguages")
+            }
+            
+            handler(marks, error)
+        }
     }
     
     
@@ -97,21 +109,11 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
             {
                 manager.stopUpdatingLocation()
                 
-                let currentLanguages = UserDefaults.standard.object(forKey: "AppleLanguages")
-                
-                if self.forceReverseLanuage {
-                    UserDefaults.standard.set([self.reverseLanguageDesignator], forKey: "AppleLanguages")
-                }
-                
                 self.reverseGeocodeLocation(locations.first!, handler: { (marks, error) in
                     if let place = marks?.first
                     {
                         self.placemark = place
                         self.easyReverseHandler?(place)
-                    }
-                    
-                    if self.forceReverseLanuage {
-                        UserDefaults.standard.set(currentLanguages, forKey: "AppleLanguages")
                     }
                     
                     self.reverseHandler?(marks)
