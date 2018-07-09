@@ -34,7 +34,7 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
     var easyReverseHandler  : EasyReverseHandler?
     
     /// 逆地理编码的语音指定器，默认为 nil，即使用系统默认的。
-    var reverseLanguageDesignator: String?
+    public var reverseLanguageDesignator: String?
     
     /// 是否强制指定了逆地理编码的语音指定器。
     fileprivate var forceReverseLanuage: Bool {
