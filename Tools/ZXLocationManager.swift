@@ -41,7 +41,7 @@ open class ZXLocationManager : NSObject,CLLocationManagerDelegate
         return reverseLanguageDesignator != nil
     }
     
-    var locationAuthorized: Bool {
+    public var locationAuthorized: Bool {
         let status = CLLocationManager.authorizationStatus()
         return status == .authorizedWhenInUse || status == .authorizedAlways
     }
